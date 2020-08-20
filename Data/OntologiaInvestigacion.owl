@@ -1,0 +1,1452 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/OntologiaInvestigacion"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/OntologiaInvestigacion">
+    <Prefix name="" IRI="http://www.semanticweb.org/OntologiaInvestigacion"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Convocatoria"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Departamento"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Diccionario"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Docente"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Estudiante"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Facultad"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Grupo_investigacion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Investigador"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Investigador_externo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Linea_investigacion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Palabra"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Programa"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Proyecto_investigacion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Universidad"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VIIS"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#convocatoria_dirigida_investigador"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#convocatoria_pertenece_viis"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#convocatoria_tiene_pi"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#departamento_pertenece_facultad"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#departamento_tiene_gi"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#departamento_tiene_programa"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#diccionario_tiene_palabra"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#docente_es_investigador"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#docente_pertenece_gi"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#docente_pertenece_programa"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#docente_puede_asesorar_pi"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#docente_puede_realizar_pi"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#estudiante_es_investigador"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#estudiante_pertenece_gi"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#estudiante_pertenece_programa"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#estudiante_realiza_pi"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#facultad_pertenece_universidad"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#facultad_tiene_departamento"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#gi_esta_adscrito_viis"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#gi_pertenece_departamento"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#gi_tiene_docente"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#gi_tiene_estudiante"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#gi_tiene_investigador"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#gi_tiene_li"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ie_es_investigador"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#investigador_pertenece_gi"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#investigador_pertenece_viis"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#investigador_puede_ser_docente"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#investigador_puede_ser_estudiante"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#investigador_puede_ser_ie"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#investigador_se_encuentra_convocatoria"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#li_pertenece_gi"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#li_tiene_pi"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#palabra_conecta_palabra"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#palabra_describe_pi"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#palabra_pertenece_diccionario"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#palabra_sinonimo_palabra"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#pi_pertenece_convocatoria"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#pi_pertenece_li"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#pi_pertenece_viis"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#pi_puede_ser_asesorado_docente"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#pi_puede_ser_realizado_docente"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#pi_puede_ser_realizado_estudiante"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#pi_tiene_palabra"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#programa_pertenece_departamento"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#programa_tiene_docente"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#programa_tiene_estudiante"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#universidad_tiene_facultad"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#universidad_tiene_viis"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#viis_adscribe_gi"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#viis_pertenece_universidad"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#viis_tiene_convocatoria"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#viis_tiene_investigador"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#viis_tiene_pi"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#anio_convocatoria"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#apellidos_docente"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#apellidos_estudiante"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#apellidos_investigador_externo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#cedula_docente"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#cedula_estudiante"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#cedula_investigador_externo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#codigo_docente"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#codigo_estudiante"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#concepto_palabra"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#correo_docente"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#correo_estudiante"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#correo_investigador_externo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#descripcion_palabra"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#detalle_palabra"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#estado_proyecto_investigacion"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#id_convocatoria"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#id_departamento"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#id_diccionario"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#id_docente"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#id_estudiante"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#id_facultad"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#id_grupo_investigacion"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#id_investigador"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#id_investigador_externo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#id_linea_investigacion"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#id_palabra"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#id_programa"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#id_proyecto_investigacion"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#id_universidad"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#id_viis"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#lema_palabra"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nombre_VIIS"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nombre_convocatoria"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nombre_departamento"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nombre_diccionario"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nombre_facultad"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nombre_grupo_investigacion"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nombre_investigador"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nombre_linea_investigacion"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nombre_programa"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nombre_universidad"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nombres_docente"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nombres_estudiante"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nombres_investigador_externo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#palabra_clave1"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#palabra_clave2"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#palabra_clave3"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#palabra_clave4"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#palabra_clave5"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#resumen_proyecto_investigacion"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#significado_palabra"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#tipo_convocatoria"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#tipo_palabra"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#tipo_proyecto_investigacion"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#titulo_proyecto_investigacion"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Convocatoria"/>
+        <Class IRI="#VIIS"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Departamento"/>
+        <Class IRI="#Facultad"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Docente"/>
+        <Class IRI="#Programa"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Estudiante"/>
+        <Class IRI="#Programa"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Facultad"/>
+        <Class IRI="#Universidad"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Investigador"/>
+        <Class IRI="#Grupo_investigacion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Linea_investigacion"/>
+        <Class IRI="#Grupo_investigacion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Palabra"/>
+        <Class IRI="#Diccionario"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Programa"/>
+        <Class IRI="#Departamento"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VIIS"/>
+        <Class IRI="#Universidad"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Convocatoria"/>
+        <Class IRI="#Departamento"/>
+        <Class IRI="#Diccionario"/>
+        <Class IRI="#Docente"/>
+        <Class IRI="#Estudiante"/>
+        <Class IRI="#Facultad"/>
+        <Class IRI="#Grupo_investigacion"/>
+        <Class IRI="#Investigador"/>
+        <Class IRI="#Investigador_externo"/>
+        <Class IRI="#Linea_investigacion"/>
+        <Class IRI="#Palabra"/>
+        <Class IRI="#Programa"/>
+        <Class IRI="#Proyecto_investigacion"/>
+        <Class IRI="#Universidad"/>
+        <Class IRI="#VIIS"/>
+    </DisjointClasses>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#convocatoria_dirigida_investigador"/>
+        <ObjectProperty IRI="#investigador_se_encuentra_convocatoria"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#convocatoria_pertenece_viis"/>
+        <ObjectProperty IRI="#viis_tiene_convocatoria"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#convocatoria_tiene_pi"/>
+        <ObjectProperty IRI="#pi_pertenece_convocatoria"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#departamento_pertenece_facultad"/>
+        <ObjectProperty IRI="#facultad_tiene_departamento"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#departamento_tiene_gi"/>
+        <ObjectProperty IRI="#gi_pertenece_departamento"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#departamento_tiene_programa"/>
+        <ObjectProperty IRI="#programa_pertenece_departamento"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#diccionario_tiene_palabra"/>
+        <ObjectProperty IRI="#palabra_pertenece_diccionario"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#docente_es_investigador"/>
+        <ObjectProperty IRI="#investigador_puede_ser_docente"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#docente_pertenece_gi"/>
+        <ObjectProperty IRI="#gi_tiene_docente"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#docente_pertenece_programa"/>
+        <ObjectProperty IRI="#programa_tiene_docente"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#docente_puede_asesorar_pi"/>
+        <ObjectProperty IRI="#pi_puede_ser_asesorado_docente"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#docente_puede_realizar_pi"/>
+        <ObjectProperty IRI="#pi_puede_ser_realizado_docente"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#estudiante_es_investigador"/>
+        <ObjectProperty IRI="#investigador_puede_ser_estudiante"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#estudiante_pertenece_gi"/>
+        <ObjectProperty IRI="#gi_tiene_estudiante"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#estudiante_pertenece_programa"/>
+        <ObjectProperty IRI="#programa_tiene_estudiante"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#estudiante_realiza_pi"/>
+        <ObjectProperty IRI="#pi_puede_ser_realizado_estudiante"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#facultad_pertenece_universidad"/>
+        <ObjectProperty IRI="#universidad_tiene_facultad"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#gi_esta_adscrito_viis"/>
+        <ObjectProperty IRI="#viis_adscribe_gi"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#gi_tiene_investigador"/>
+        <ObjectProperty IRI="#investigador_pertenece_gi"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#gi_tiene_li"/>
+        <ObjectProperty IRI="#li_pertenece_gi"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#ie_es_investigador"/>
+        <ObjectProperty IRI="#investigador_puede_ser_ie"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#investigador_pertenece_viis"/>
+        <ObjectProperty IRI="#viis_tiene_investigador"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#li_tiene_pi"/>
+        <ObjectProperty IRI="#pi_pertenece_li"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#palabra_conecta_palabra"/>
+        <ObjectProperty IRI="#palabra_conecta_palabra"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#palabra_describe_pi"/>
+        <ObjectProperty IRI="#pi_tiene_palabra"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#palabra_sinonimo_palabra"/>
+        <ObjectProperty IRI="#palabra_sinonimo_palabra"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#pi_pertenece_viis"/>
+        <ObjectProperty IRI="#viis_tiene_pi"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#universidad_tiene_viis"/>
+        <ObjectProperty IRI="#viis_pertenece_universidad"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#convocatoria_dirigida_investigador"/>
+        <Class IRI="#Convocatoria"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#convocatoria_pertenece_viis"/>
+        <Class IRI="#Convocatoria"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#convocatoria_tiene_pi"/>
+        <Class IRI="#Convocatoria"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#departamento_pertenece_facultad"/>
+        <Class IRI="#Departamento"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#departamento_tiene_gi"/>
+        <Class IRI="#Departamento"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#departamento_tiene_programa"/>
+        <Class IRI="#Departamento"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#diccionario_tiene_palabra"/>
+        <Class IRI="#Diccionario"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#docente_es_investigador"/>
+        <Class IRI="#Docente"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#docente_pertenece_gi"/>
+        <Class IRI="#Docente"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#docente_pertenece_programa"/>
+        <Class IRI="#Docente"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#docente_puede_asesorar_pi"/>
+        <Class IRI="#Docente"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#docente_puede_realizar_pi"/>
+        <Class IRI="#Docente"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#estudiante_es_investigador"/>
+        <Class IRI="#Estudiante"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#estudiante_pertenece_gi"/>
+        <Class IRI="#Estudiante"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#estudiante_pertenece_programa"/>
+        <Class IRI="#Estudiante"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#estudiante_realiza_pi"/>
+        <Class IRI="#Estudiante"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#facultad_pertenece_universidad"/>
+        <Class IRI="#Facultad"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#facultad_tiene_departamento"/>
+        <Class IRI="#Facultad"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#gi_esta_adscrito_viis"/>
+        <Class IRI="#Grupo_investigacion"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#gi_pertenece_departamento"/>
+        <Class IRI="#Grupo_investigacion"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#gi_tiene_docente"/>
+        <Class IRI="#Grupo_investigacion"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#gi_tiene_estudiante"/>
+        <Class IRI="#Grupo_investigacion"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#gi_tiene_investigador"/>
+        <Class IRI="#Grupo_investigacion"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#gi_tiene_li"/>
+        <Class IRI="#Grupo_investigacion"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#ie_es_investigador"/>
+        <Class IRI="#Investigador_externo"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#investigador_pertenece_gi"/>
+        <Class IRI="#Investigador"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#investigador_pertenece_viis"/>
+        <Class IRI="#Investigador"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#investigador_puede_ser_docente"/>
+        <Class IRI="#Investigador"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#investigador_puede_ser_estudiante"/>
+        <Class IRI="#Investigador"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#investigador_puede_ser_ie"/>
+        <Class IRI="#Investigador"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#investigador_se_encuentra_convocatoria"/>
+        <Class IRI="#Investigador"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#li_pertenece_gi"/>
+        <Class IRI="#Linea_investigacion"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#li_tiene_pi"/>
+        <Class IRI="#Linea_investigacion"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#palabra_conecta_palabra"/>
+        <Class IRI="#Palabra"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#palabra_describe_pi"/>
+        <Class IRI="#Palabra"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#palabra_pertenece_diccionario"/>
+        <Class IRI="#Palabra"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#palabra_sinonimo_palabra"/>
+        <Class IRI="#Palabra"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#pi_pertenece_convocatoria"/>
+        <Class IRI="#Proyecto_investigacion"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#pi_pertenece_li"/>
+        <Class IRI="#Proyecto_investigacion"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#pi_pertenece_viis"/>
+        <Class IRI="#Proyecto_investigacion"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#pi_puede_ser_asesorado_docente"/>
+        <Class IRI="#Proyecto_investigacion"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#pi_puede_ser_realizado_docente"/>
+        <Class IRI="#Proyecto_investigacion"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#pi_puede_ser_realizado_estudiante"/>
+        <Class IRI="#Proyecto_investigacion"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#pi_tiene_palabra"/>
+        <Class IRI="#Proyecto_investigacion"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#programa_pertenece_departamento"/>
+        <Class IRI="#Programa"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#programa_tiene_docente"/>
+        <Class IRI="#Programa"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#programa_tiene_estudiante"/>
+        <Class IRI="#Programa"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#universidad_tiene_facultad"/>
+        <Class IRI="#Universidad"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#universidad_tiene_viis"/>
+        <Class IRI="#Universidad"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#viis_adscribe_gi"/>
+        <Class IRI="#VIIS"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#viis_pertenece_universidad"/>
+        <Class IRI="#VIIS"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#viis_tiene_convocatoria"/>
+        <Class IRI="#VIIS"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#viis_tiene_investigador"/>
+        <Class IRI="#VIIS"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#viis_tiene_pi"/>
+        <Class IRI="#VIIS"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+        <Class IRI="#Facultad"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#convocatoria_dirigida_investigador"/>
+        <Class IRI="#Investigador"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#convocatoria_pertenece_viis"/>
+        <Class IRI="#VIIS"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#convocatoria_tiene_pi"/>
+        <Class IRI="#Proyecto_investigacion"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#departamento_pertenece_facultad"/>
+        <Class IRI="#Facultad"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#departamento_tiene_gi"/>
+        <Class IRI="#Grupo_investigacion"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#departamento_tiene_programa"/>
+        <Class IRI="#Programa"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#diccionario_tiene_palabra"/>
+        <Class IRI="#Palabra"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#docente_es_investigador"/>
+        <Class IRI="#Investigador"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#docente_pertenece_gi"/>
+        <Class IRI="#Grupo_investigacion"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#docente_pertenece_programa"/>
+        <Class IRI="#Programa"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#docente_puede_asesorar_pi"/>
+        <Class IRI="#Proyecto_investigacion"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#docente_puede_realizar_pi"/>
+        <Class IRI="#Proyecto_investigacion"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#estudiante_es_investigador"/>
+        <Class IRI="#Investigador"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#estudiante_pertenece_gi"/>
+        <Class IRI="#Grupo_investigacion"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#estudiante_pertenece_programa"/>
+        <Class IRI="#Programa"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#estudiante_realiza_pi"/>
+        <Class IRI="#Proyecto_investigacion"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#facultad_pertenece_universidad"/>
+        <Class IRI="#Universidad"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#facultad_tiene_departamento"/>
+        <Class IRI="#Departamento"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#gi_esta_adscrito_viis"/>
+        <Class IRI="#VIIS"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#gi_pertenece_departamento"/>
+        <Class IRI="#Departamento"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#gi_tiene_docente"/>
+        <Class IRI="#Docente"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#gi_tiene_estudiante"/>
+        <Class IRI="#Estudiante"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#gi_tiene_investigador"/>
+        <Class IRI="#Investigador"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#gi_tiene_li"/>
+        <Class IRI="#Linea_investigacion"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#ie_es_investigador"/>
+        <Class IRI="#Investigador"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#investigador_pertenece_gi"/>
+        <Class IRI="#Grupo_investigacion"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#investigador_pertenece_viis"/>
+        <Class IRI="#VIIS"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#investigador_puede_ser_docente"/>
+        <Class IRI="#Docente"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#investigador_puede_ser_estudiante"/>
+        <Class IRI="#Estudiante"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#investigador_puede_ser_ie"/>
+        <Class IRI="#Investigador_externo"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#investigador_se_encuentra_convocatoria"/>
+        <Class IRI="#Convocatoria"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#li_pertenece_gi"/>
+        <Class IRI="#Grupo_investigacion"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#li_tiene_pi"/>
+        <Class IRI="#Proyecto_investigacion"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#palabra_conecta_palabra"/>
+        <Class IRI="#Palabra"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#palabra_describe_pi"/>
+        <Class IRI="#Proyecto_investigacion"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#palabra_pertenece_diccionario"/>
+        <Class IRI="#Diccionario"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#palabra_sinonimo_palabra"/>
+        <Class IRI="#Palabra"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#pi_pertenece_convocatoria"/>
+        <Class IRI="#Convocatoria"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#pi_pertenece_li"/>
+        <Class IRI="#Linea_investigacion"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#pi_pertenece_viis"/>
+        <Class IRI="#VIIS"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#pi_puede_ser_asesorado_docente"/>
+        <Class IRI="#Docente"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#pi_puede_ser_realizado_docente"/>
+        <Class IRI="#Docente"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#pi_puede_ser_realizado_estudiante"/>
+        <Class IRI="#Estudiante"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#pi_tiene_palabra"/>
+        <Class IRI="#Palabra"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#programa_pertenece_departamento"/>
+        <Class IRI="#Departamento"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#programa_tiene_docente"/>
+        <Class IRI="#Docente"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#programa_tiene_estudiante"/>
+        <Class IRI="#Estudiante"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#universidad_tiene_facultad"/>
+        <Class IRI="#Facultad"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#universidad_tiene_viis"/>
+        <Class IRI="#VIIS"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#viis_adscribe_gi"/>
+        <Class IRI="#Grupo_investigacion"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#viis_pertenece_universidad"/>
+        <Class IRI="#Universidad"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#viis_tiene_convocatoria"/>
+        <Class IRI="#Convocatoria"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#viis_tiene_investigador"/>
+        <Class IRI="#Investigador"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#viis_tiene_pi"/>
+        <Class IRI="#Proyecto_investigacion"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+        <Class IRI="#Universidad"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#anio_convocatoria"/>
+        <Class IRI="#Convocatoria"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#apellidos_docente"/>
+        <Class IRI="#Docente"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#apellidos_estudiante"/>
+        <Class IRI="#Estudiante"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#apellidos_investigador_externo"/>
+        <Class IRI="#Investigador_externo"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#cedula_docente"/>
+        <Class IRI="#Docente"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#cedula_estudiante"/>
+        <Class IRI="#Estudiante"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#cedula_investigador_externo"/>
+        <Class IRI="#Investigador_externo"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#codigo_docente"/>
+        <Class IRI="#Docente"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#codigo_estudiante"/>
+        <Class IRI="#Estudiante"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#concepto_palabra"/>
+        <Class IRI="#Palabra"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#correo_docente"/>
+        <Class IRI="#Docente"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#correo_estudiante"/>
+        <Class IRI="#Estudiante"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#correo_investigador_externo"/>
+        <Class IRI="#Investigador_externo"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#descripcion_palabra"/>
+        <Class IRI="#Palabra"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#detalle_palabra"/>
+        <Class IRI="#Palabra"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#estado_proyecto_investigacion"/>
+        <Class IRI="#Proyecto_investigacion"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#id_convocatoria"/>
+        <Class IRI="#Convocatoria"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#id_departamento"/>
+        <Class IRI="#Departamento"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#id_diccionario"/>
+        <Class IRI="#Diccionario"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#id_docente"/>
+        <Class IRI="#Docente"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#id_estudiante"/>
+        <Class IRI="#Estudiante"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#id_facultad"/>
+        <Class IRI="#Facultad"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#id_grupo_investigacion"/>
+        <Class IRI="#Grupo_investigacion"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#id_investigador"/>
+        <Class IRI="#Investigador"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#id_investigador_externo"/>
+        <Class IRI="#Investigador_externo"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#id_linea_investigacion"/>
+        <Class IRI="#Linea_investigacion"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#id_palabra"/>
+        <Class IRI="#Palabra"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#id_programa"/>
+        <Class IRI="#Programa"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#id_proyecto_investigacion"/>
+        <Class IRI="#Proyecto_investigacion"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#id_universidad"/>
+        <Class IRI="#Universidad"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#id_viis"/>
+        <Class IRI="#VIIS"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#lema_palabra"/>
+        <Class IRI="#Palabra"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#nombre_VIIS"/>
+        <Class IRI="#VIIS"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#nombre_convocatoria"/>
+        <Class IRI="#Convocatoria"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#nombre_departamento"/>
+        <Class IRI="#Departamento"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#nombre_diccionario"/>
+        <Class IRI="#Diccionario"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#nombre_facultad"/>
+        <Class IRI="#Facultad"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#nombre_grupo_investigacion"/>
+        <Class IRI="#Grupo_investigacion"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#nombre_investigador"/>
+        <Class IRI="#Investigador"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#nombre_linea_investigacion"/>
+        <Class IRI="#Linea_investigacion"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#nombre_programa"/>
+        <Class IRI="#Programa"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#nombre_universidad"/>
+        <Class IRI="#Universidad"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#nombres_docente"/>
+        <Class IRI="#Docente"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#nombres_estudiante"/>
+        <Class IRI="#Estudiante"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#nombres_investigador_externo"/>
+        <Class IRI="#Investigador_externo"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#palabra_clave1"/>
+        <Class IRI="#Proyecto_investigacion"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#palabra_clave2"/>
+        <Class IRI="#Proyecto_investigacion"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#palabra_clave3"/>
+        <Class IRI="#Proyecto_investigacion"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#palabra_clave4"/>
+        <Class IRI="#Proyecto_investigacion"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#palabra_clave5"/>
+        <Class IRI="#Proyecto_investigacion"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#resumen_proyecto_investigacion"/>
+        <Class IRI="#Proyecto_investigacion"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#significado_palabra"/>
+        <Class IRI="#Palabra"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#tipo_convocatoria"/>
+        <Class IRI="#Convocatoria"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#tipo_palabra"/>
+        <Class IRI="#Palabra"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#tipo_proyecto_investigacion"/>
+        <Class IRI="#Proyecto_investigacion"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#titulo_proyecto_investigacion"/>
+        <Class IRI="#Proyecto_investigacion"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#anio_convocatoria"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#apellidos_docente"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#apellidos_estudiante"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#apellidos_investigador_externo"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#cedula_docente"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#cedula_estudiante"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#cedula_investigador_externo"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#codigo_docente"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#codigo_estudiante"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#concepto_palabra"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#correo_docente"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#correo_estudiante"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#correo_investigador_externo"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#descripcion_palabra"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#detalle_palabra"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#estado_proyecto_investigacion"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#id_convocatoria"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#id_departamento"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#id_diccionario"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#id_docente"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#id_estudiante"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#id_facultad"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#id_grupo_investigacion"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#id_investigador"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#id_investigador_externo"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#id_linea_investigacion"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#id_palabra"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#id_programa"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#id_proyecto_investigacion"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#id_universidad"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#id_viis"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#lema_palabra"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#nombre_VIIS"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#nombre_convocatoria"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#nombre_departamento"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#nombre_diccionario"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#nombre_facultad"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#nombre_grupo_investigacion"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#nombre_investigador"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#nombre_linea_investigacion"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#nombre_programa"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#nombre_universidad"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#nombres_docente"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#nombres_estudiante"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#nombres_investigador_externo"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#palabra_clave1"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#palabra_clave2"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#palabra_clave3"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#palabra_clave4"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#palabra_clave5"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#resumen_proyecto_investigacion"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#significado_palabra"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#tipo_convocatoria"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#tipo_palabra"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#tipo_proyecto_investigacion"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#titulo_proyecto_investigacion"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
