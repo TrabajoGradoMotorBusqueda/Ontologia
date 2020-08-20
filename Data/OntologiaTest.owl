@@ -1,0 +1,683 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://www.semanticweb.org/OntologiaTest"
+         xmlns="http://www.semanticweb.org/OntologiaTest#">
+
+<owl:Ontology rdf:about="http://www.semanticweb.org/OntologiaTest"/>
+
+<owl:ObjectProperty rdf:about="#convocatoria_dirigida_investigador">
+  <rdfs:domain rdf:resource="#Convocatoria"/>
+  <rdfs:range rdf:resource="#Investigador"/>
+  <owl:inverseOf rdf:resource="#investigador_se_encuentra_convocatoria"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#convocatoria_pertenece_viis">
+  <rdfs:domain rdf:resource="#Convocatoria"/>
+  <rdfs:range rdf:resource="#VIIS"/>
+  <owl:inverseOf rdf:resource="#viis_tiene_convocatoria"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#convocatoria_tiene_pi">
+  <rdfs:domain rdf:resource="#Convocatoria"/>
+  <rdfs:range rdf:resource="#Proyecto_investigacion"/>
+  <owl:inverseOf rdf:resource="#pi_pertenece_convocatoria"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#departamento_pertenece_facultad">
+  <rdfs:domain rdf:resource="#Departamento"/>
+  <rdfs:range rdf:resource="#Facultad"/>
+  <owl:inverseOf rdf:resource="#facultad_tiene_departamento"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#departamento_tiene_gi">
+  <rdfs:domain rdf:resource="#Departamento"/>
+  <rdfs:range rdf:resource="#Grupo_investigacion"/>
+  <owl:inverseOf rdf:resource="#gi_pertenece_departamento"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#departamento_tiene_programa">
+  <rdfs:domain rdf:resource="#Departamento"/>
+  <rdfs:range rdf:resource="#Programa"/>
+  <owl:inverseOf rdf:resource="#programa_pertenece_departamento"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#diccionario_tiene_palabra">
+  <rdfs:domain rdf:resource="#Diccionario"/>
+  <rdfs:range rdf:resource="#Palabra"/>
+  <owl:inverseOf rdf:resource="#palabra_pertenece_diccionario"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#docente_es_investigador">
+  <rdfs:domain rdf:resource="#Docente"/>
+  <rdfs:range rdf:resource="#Investigador"/>
+  <owl:inverseOf rdf:resource="#investigador_puede_ser_docente"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#docente_pertenece_gi">
+  <rdfs:domain rdf:resource="#Docente"/>
+  <rdfs:range rdf:resource="#Grupo_investigacion"/>
+  <owl:inverseOf rdf:resource="#gi_tiene_docente"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#docente_pertenece_programa">
+  <rdfs:domain rdf:resource="#Docente"/>
+  <rdfs:range rdf:resource="#Programa"/>
+  <owl:inverseOf rdf:resource="#programa_tiene_docente"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#docente_puede_asesorar_pi">
+  <rdfs:domain rdf:resource="#Docente"/>
+  <rdfs:range rdf:resource="#Proyecto_investigacion"/>
+  <owl:inverseOf rdf:resource="#pi_puede_ser_asesorado_docente"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#docente_puede_realizar_pi">
+  <rdfs:domain rdf:resource="#Docente"/>
+  <rdfs:range rdf:resource="#Proyecto_investigacion"/>
+  <owl:inverseOf rdf:resource="#pi_puede_ser_realizado_docente"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#estudiante_es_investigador">
+  <rdfs:domain rdf:resource="#Estudiante"/>
+  <rdfs:range rdf:resource="#Investigador"/>
+  <owl:inverseOf rdf:resource="#investigador_puede_ser_estudiante"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#estudiante_pertenece_gi">
+  <rdfs:domain rdf:resource="#Estudiante"/>
+  <rdfs:range rdf:resource="#Grupo_investigacion"/>
+  <owl:inverseOf rdf:resource="#gi_tiene_estudiante"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#estudiante_pertenece_programa">
+  <rdfs:domain rdf:resource="#Estudiante"/>
+  <rdfs:range rdf:resource="#Programa"/>
+  <owl:inverseOf rdf:resource="#programa_tiene_estudiante"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#estudiante_realiza_pi">
+  <rdfs:domain rdf:resource="#Estudiante"/>
+  <rdfs:range rdf:resource="#Proyecto_investigacion"/>
+  <owl:inverseOf rdf:resource="#pi_puede_ser_realizado_estudiante"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#facultad_pertenece_universidad">
+  <rdfs:domain rdf:resource="#Facultad"/>
+  <rdfs:range rdf:resource="#Universidad"/>
+  <owl:inverseOf rdf:resource="#universidad_tiene_facultad"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#facultad_tiene_departamento">
+  <rdfs:domain rdf:resource="#Facultad"/>
+  <rdfs:range rdf:resource="#Departamento"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#gi_esta_adscrito_viis">
+  <rdfs:domain rdf:resource="#Grupo_investigacion"/>
+  <rdfs:range rdf:resource="#VIIS"/>
+  <owl:inverseOf rdf:resource="#viis_adscribe_gi"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#gi_pertenece_departamento">
+  <rdfs:domain rdf:resource="#Grupo_investigacion"/>
+  <rdfs:range rdf:resource="#Departamento"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#gi_tiene_docente">
+  <rdfs:domain rdf:resource="#Grupo_investigacion"/>
+  <rdfs:range rdf:resource="#Docente"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#gi_tiene_estudiante">
+  <rdfs:domain rdf:resource="#Grupo_investigacion"/>
+  <rdfs:range rdf:resource="#Estudiante"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#gi_tiene_investigador">
+  <rdfs:domain rdf:resource="#Grupo_investigacion"/>
+  <rdfs:range rdf:resource="#Investigador"/>
+  <owl:inverseOf rdf:resource="#investigador_pertenece_gi"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#gi_tiene_li">
+  <rdfs:domain rdf:resource="#Grupo_investigacion"/>
+  <rdfs:range rdf:resource="#Linea_investigacion"/>
+  <owl:inverseOf rdf:resource="#li_pertenece_gi"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#ie_es_investigador">
+  <rdfs:domain rdf:resource="#Investigador_externo"/>
+  <rdfs:range rdf:resource="#Investigador"/>
+  <owl:inverseOf rdf:resource="#investigador_puede_ser_ie"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#investigador_pertenece_gi">
+  <rdfs:domain rdf:resource="#Investigador"/>
+  <rdfs:range rdf:resource="#Grupo_investigacion"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#investigador_pertenece_viis">
+  <rdfs:domain rdf:resource="#Investigador"/>
+  <rdfs:range rdf:resource="#VIIS"/>
+  <owl:inverseOf rdf:resource="#viis_tiene_investigador"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#investigador_puede_ser_docente">
+  <rdfs:domain rdf:resource="#Investigador"/>
+  <rdfs:range rdf:resource="#Docente"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#investigador_puede_ser_estudiante">
+  <rdfs:domain rdf:resource="#Investigador"/>
+  <rdfs:range rdf:resource="#Estudiante"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#investigador_puede_ser_ie">
+  <rdfs:domain rdf:resource="#Investigador"/>
+  <rdfs:range rdf:resource="#Investigador_externo"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#investigador_se_encuentra_convocatoria">
+  <rdfs:domain rdf:resource="#Investigador"/>
+  <rdfs:range rdf:resource="#Convocatoria"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#li_pertenece_gi">
+  <rdfs:domain rdf:resource="#Linea_investigacion"/>
+  <rdfs:range rdf:resource="#Grupo_investigacion"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#li_tiene_pi">
+  <rdfs:domain rdf:resource="#Linea_investigacion"/>
+  <rdfs:range rdf:resource="#Proyecto_investigacion"/>
+  <owl:inverseOf rdf:resource="#pi_pertenece_li"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#palabra_conecta_palabra">
+  <rdfs:domain rdf:resource="#Palabra"/>
+  <rdfs:range rdf:resource="#Palabra"/>
+  <owl:inverseOf rdf:resource="#palabra_conecta_palabra"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#palabra_describe_pi">
+  <rdfs:domain rdf:resource="#Palabra"/>
+  <rdfs:range rdf:resource="#Proyecto_investigacion"/>
+  <owl:inverseOf rdf:resource="#pi_tiene_palabra"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#palabra_pertenece_diccionario">
+  <rdfs:domain rdf:resource="#Palabra"/>
+  <rdfs:range rdf:resource="#Diccionario"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#palabra_sinonimo_palabra">
+  <rdfs:domain rdf:resource="#Palabra"/>
+  <rdfs:range rdf:resource="#Palabra"/>
+  <owl:inverseOf rdf:resource="#palabra_sinonimo_palabra"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#pi_pertenece_convocatoria">
+  <rdfs:domain rdf:resource="#Proyecto_investigacion"/>
+  <rdfs:range rdf:resource="#Convocatoria"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#pi_pertenece_li">
+  <rdfs:domain rdf:resource="#Proyecto_investigacion"/>
+  <rdfs:range rdf:resource="#Linea_investigacion"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#pi_pertenece_viis">
+  <rdfs:domain rdf:resource="#Proyecto_investigacion"/>
+  <rdfs:range rdf:resource="#VIIS"/>
+  <owl:inverseOf rdf:resource="#viis_tiene_pi"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#pi_puede_ser_asesorado_docente">
+  <rdfs:domain rdf:resource="#Proyecto_investigacion"/>
+  <rdfs:range rdf:resource="#Docente"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#pi_puede_ser_realizado_docente">
+  <rdfs:domain rdf:resource="#Proyecto_investigacion"/>
+  <rdfs:range rdf:resource="#Docente"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#pi_puede_ser_realizado_estudiante">
+  <rdfs:domain rdf:resource="#Proyecto_investigacion"/>
+  <rdfs:range rdf:resource="#Estudiante"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#pi_tiene_palabra">
+  <rdfs:domain rdf:resource="#Proyecto_investigacion"/>
+  <rdfs:range rdf:resource="#Palabra"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#programa_pertenece_departamento">
+  <rdfs:domain rdf:resource="#Programa"/>
+  <rdfs:range rdf:resource="#Departamento"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#programa_tiene_docente">
+  <rdfs:domain rdf:resource="#Programa"/>
+  <rdfs:range rdf:resource="#Docente"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#programa_tiene_estudiante">
+  <rdfs:domain rdf:resource="#Programa"/>
+  <rdfs:range rdf:resource="#Estudiante"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#universidad_tiene_facultad">
+  <rdfs:domain rdf:resource="#Universidad"/>
+  <rdfs:range rdf:resource="#Facultad"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#universidad_tiene_viis">
+  <rdfs:domain rdf:resource="#Universidad"/>
+  <rdfs:range rdf:resource="#VIIS"/>
+  <owl:inverseOf rdf:resource="#viis_pertenece_universidad"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#viis_adscribe_gi">
+  <rdfs:domain rdf:resource="#VIIS"/>
+  <rdfs:range rdf:resource="#Grupo_investigacion"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#viis_pertenece_universidad">
+  <rdfs:domain rdf:resource="#VIIS"/>
+  <rdfs:range rdf:resource="#Universidad"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#viis_tiene_convocatoria">
+  <rdfs:domain rdf:resource="#VIIS"/>
+  <rdfs:range rdf:resource="#Convocatoria"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#viis_tiene_investigador">
+  <rdfs:domain rdf:resource="#VIIS"/>
+  <rdfs:range rdf:resource="#Investigador"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#viis_tiene_pi">
+  <rdfs:domain rdf:resource="#VIIS"/>
+  <rdfs:range rdf:resource="#Proyecto_investigacion"/>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="#anio_convocatoria">
+  <rdfs:domain rdf:resource="#Convocatoria"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#apellidos_docente">
+  <rdfs:domain rdf:resource="#Docente"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#apellidos_estudiante">
+  <rdfs:domain rdf:resource="#Estudiante"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#apellidos_investigador_externo">
+  <rdfs:domain rdf:resource="#Investigador_externo"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#cedula_docente">
+  <rdfs:domain rdf:resource="#Docente"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#cedula_estudiante">
+  <rdfs:domain rdf:resource="#Estudiante"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#cedula_investigador_externo">
+  <rdfs:domain rdf:resource="#Investigador_externo"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#codigo_docente">
+  <rdfs:domain rdf:resource="#Docente"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#codigo_estudiante">
+  <rdfs:domain rdf:resource="#Estudiante"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#concepto_palabra">
+  <rdfs:domain rdf:resource="#Palabra"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#correo_docente">
+  <rdfs:domain rdf:resource="#Docente"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#correo_estudiante">
+  <rdfs:domain rdf:resource="#Estudiante"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#correo_investigador_externo">
+  <rdfs:domain rdf:resource="#Investigador_externo"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#descripcion_palabra">
+  <rdfs:domain rdf:resource="#Palabra"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#detalle_palabra">
+  <rdfs:domain rdf:resource="#Palabra"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#estado_proyecto_investigacion">
+  <rdfs:domain rdf:resource="#Proyecto_investigacion"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#id_convocatoria">
+  <rdfs:domain rdf:resource="#Convocatoria"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#id_departamento">
+  <rdfs:domain rdf:resource="#Departamento"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#id_diccionario">
+  <rdfs:domain rdf:resource="#Diccionario"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#id_docente">
+  <rdfs:domain rdf:resource="#Docente"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#id_estudiante">
+  <rdfs:domain rdf:resource="#Estudiante"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#id_facultad">
+  <rdfs:domain rdf:resource="#Facultad"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#id_grupo_investigacion">
+  <rdfs:domain rdf:resource="#Grupo_investigacion"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#id_investigador">
+  <rdfs:domain rdf:resource="#Investigador"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#id_investigador_externo">
+  <rdfs:domain rdf:resource="#Investigador_externo"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#id_linea_investigacion">
+  <rdfs:domain rdf:resource="#Linea_investigacion"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#id_palabra">
+  <rdfs:domain rdf:resource="#Palabra"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#id_programa">
+  <rdfs:domain rdf:resource="#Programa"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#id_proyecto_investigacion">
+  <rdfs:domain rdf:resource="#Proyecto_investigacion"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#id_universidad">
+  <rdfs:domain rdf:resource="#Universidad"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#id_viis">
+  <rdfs:domain rdf:resource="#VIIS"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#lema_palabra">
+  <rdfs:domain rdf:resource="#Palabra"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#nombre_VIIS">
+  <rdfs:domain rdf:resource="#VIIS"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#nombre_convocatoria">
+  <rdfs:domain rdf:resource="#Convocatoria"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#nombre_departamento">
+  <rdfs:domain rdf:resource="#Departamento"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#nombre_diccionario">
+  <rdfs:domain rdf:resource="#Diccionario"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#nombre_facultad">
+  <rdfs:domain rdf:resource="#Facultad"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#nombre_grupo_investigacion">
+  <rdfs:domain rdf:resource="#Grupo_investigacion"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#nombre_investigador">
+  <rdfs:domain rdf:resource="#Investigador"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#nombre_linea_investigacion">
+  <rdfs:domain rdf:resource="#Linea_investigacion"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#nombre_programa">
+  <rdfs:domain rdf:resource="#Programa"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#nombre_universidad">
+  <rdfs:domain rdf:resource="#Universidad"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#nombres_docente">
+  <rdfs:domain rdf:resource="#Docente"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#nombres_estudiante">
+  <rdfs:domain rdf:resource="#Estudiante"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#nombres_investigador_externo">
+  <rdfs:domain rdf:resource="#Investigador_externo"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#palabra_clave1">
+  <rdfs:domain rdf:resource="#Proyecto_investigacion"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#palabra_clave2">
+  <rdfs:domain rdf:resource="#Proyecto_investigacion"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#palabra_clave3">
+  <rdfs:domain rdf:resource="#Proyecto_investigacion"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#palabra_clave4">
+  <rdfs:domain rdf:resource="#Proyecto_investigacion"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#palabra_clave5">
+  <rdfs:domain rdf:resource="#Proyecto_investigacion"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#resumen_proyecto_investigacion">
+  <rdfs:domain rdf:resource="#Proyecto_investigacion"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#significado_palabra">
+  <rdfs:domain rdf:resource="#Palabra"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#tipo_convocatoria">
+  <rdfs:domain rdf:resource="#Convocatoria"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#tipo_palabra">
+  <rdfs:domain rdf:resource="#Palabra"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#tipo_proyecto_investigacion">
+  <rdfs:domain rdf:resource="#Proyecto_investigacion"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#titulo_proyecto_investigacion">
+  <rdfs:domain rdf:resource="#Proyecto_investigacion"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="#Convocatoria">
+  <rdfs:subClassOf rdf:resource="#VIIS"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Departamento">
+  <rdfs:subClassOf rdf:resource="#Facultad"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Diccionario"/>
+
+<owl:Class rdf:about="#Docente">
+  <rdfs:subClassOf rdf:resource="#Programa"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Estudiante">
+  <rdfs:subClassOf rdf:resource="#Programa"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Facultad">
+  <rdfs:subClassOf rdf:resource="#Universidad"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Grupo_investigacion"/>
+
+<owl:Class rdf:about="#Investigador">
+  <rdfs:subClassOf rdf:resource="#Grupo_investigacion"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Investigador_externo"/>
+
+<owl:Class rdf:about="#Linea_investigacion">
+  <rdfs:subClassOf rdf:resource="#Grupo_investigacion"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Palabra">
+  <rdfs:subClassOf rdf:resource="#Diccionario"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Programa">
+  <rdfs:subClassOf rdf:resource="#Departamento"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Proyecto_investigacion"/>
+
+<owl:Class rdf:about="#Universidad"/>
+
+<owl:Class rdf:about="#VIIS">
+  <rdfs:subClassOf rdf:resource="#Universidad"/>
+</owl:Class>
+
+<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty">
+  <rdfs:domain rdf:resource="#Facultad"/>
+  <rdfs:range rdf:resource="#Universidad"/>
+</rdf:Description>
+
+<Proyecto_investigacion rdf:about="#test_proyecto_investigacion1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Proyecto_investigacion>
+
+<Proyecto_investigacion rdf:about="#test_proyecto_investigacion2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Proyecto_investigacion>
+
+<Grupo_investigacion rdf:about="#test_grupo_investigacion1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Grupo_investigacion>
+
+<Investigador rdf:about="#test_investigador1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <investigador_pertenece_gi rdf:resource="#test_grupo_investigacion1"/>
+  <nombre_investigador rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Santiago</nombre_investigador>
+</Investigador>
+
+<owl:AllDisjointClasses>
+  <owl:members rdf:parseType="Collection">
+    <rdf:Description rdf:about="#Convocatoria"/>
+    <rdf:Description rdf:about="#Departamento"/>
+    <rdf:Description rdf:about="#Diccionario"/>
+    <rdf:Description rdf:about="#Docente"/>
+    <rdf:Description rdf:about="#Estudiante"/>
+    <rdf:Description rdf:about="#Facultad"/>
+    <rdf:Description rdf:about="#Grupo_investigacion"/>
+    <rdf:Description rdf:about="#Investigador"/>
+    <rdf:Description rdf:about="#Investigador_externo"/>
+    <rdf:Description rdf:about="#Linea_investigacion"/>
+    <rdf:Description rdf:about="#Palabra"/>
+    <rdf:Description rdf:about="#Programa"/>
+    <rdf:Description rdf:about="#Proyecto_investigacion"/>
+    <rdf:Description rdf:about="#Universidad"/>
+    <rdf:Description rdf:about="#VIIS"/>
+  </owl:members>
+</owl:AllDisjointClasses>
+
+
+</rdf:RDF>
