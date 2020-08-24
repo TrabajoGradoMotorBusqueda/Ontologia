@@ -19,6 +19,7 @@ Carpeta que contendrá Notebooks de Jupyter para hacer pruebas de diferentes tip
 - Estructura Ontologia
 - Creacion de Clases, Propiedades, Relaciones
 - Creación de Instancias dentro de la ontologia
+- etc...
 
 #### Scripts
 
