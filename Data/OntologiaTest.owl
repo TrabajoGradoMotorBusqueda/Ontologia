@@ -1,683 +1,1218 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-         xmlns:owl="http://www.w3.org/2002/07/owl#"
-         xml:base="http://www.semanticweb.org/OntologiaTest"
-         xmlns="http://www.semanticweb.org/OntologiaTest#">
-
-<owl:Ontology rdf:about="http://www.semanticweb.org/OntologiaTest"/>
-
-<owl:ObjectProperty rdf:about="#convocatoria_dirigida_investigador">
-  <rdfs:domain rdf:resource="#Convocatoria"/>
-  <rdfs:range rdf:resource="#Investigador"/>
-  <owl:inverseOf rdf:resource="#investigador_se_encuentra_convocatoria"/>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="#convocatoria_pertenece_viis">
-  <rdfs:domain rdf:resource="#Convocatoria"/>
-  <rdfs:range rdf:resource="#VIIS"/>
-  <owl:inverseOf rdf:resource="#viis_tiene_convocatoria"/>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="#convocatoria_tiene_pi">
-  <rdfs:domain rdf:resource="#Convocatoria"/>
-  <rdfs:range rdf:resource="#Proyecto_investigacion"/>
-  <owl:inverseOf rdf:resource="#pi_pertenece_convocatoria"/>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="#departamento_pertenece_facultad">
-  <rdfs:domain rdf:resource="#Departamento"/>
-  <rdfs:range rdf:resource="#Facultad"/>
-  <owl:inverseOf rdf:resource="#facultad_tiene_departamento"/>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="#departamento_tiene_gi">
-  <rdfs:domain rdf:resource="#Departamento"/>
-  <rdfs:range rdf:resource="#Grupo_investigacion"/>
-  <owl:inverseOf rdf:resource="#gi_pertenece_departamento"/>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="#departamento_tiene_programa">
-  <rdfs:domain rdf:resource="#Departamento"/>
-  <rdfs:range rdf:resource="#Programa"/>
-  <owl:inverseOf rdf:resource="#programa_pertenece_departamento"/>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="#diccionario_tiene_palabra">
-  <rdfs:domain rdf:resource="#Diccionario"/>
-  <rdfs:range rdf:resource="#Palabra"/>
-  <owl:inverseOf rdf:resource="#palabra_pertenece_diccionario"/>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="#docente_es_investigador">
-  <rdfs:domain rdf:resource="#Docente"/>
-  <rdfs:range rdf:resource="#Investigador"/>
-  <owl:inverseOf rdf:resource="#investigador_puede_ser_docente"/>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="#docente_pertenece_gi">
-  <rdfs:domain rdf:resource="#Docente"/>
-  <rdfs:range rdf:resource="#Grupo_investigacion"/>
-  <owl:inverseOf rdf:resource="#gi_tiene_docente"/>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="#docente_pertenece_programa">
-  <rdfs:domain rdf:resource="#Docente"/>
-  <rdfs:range rdf:resource="#Programa"/>
-  <owl:inverseOf rdf:resource="#programa_tiene_docente"/>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="#docente_puede_asesorar_pi">
-  <rdfs:domain rdf:resource="#Docente"/>
-  <rdfs:range rdf:resource="#Proyecto_investigacion"/>
-  <owl:inverseOf rdf:resource="#pi_puede_ser_asesorado_docente"/>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="#docente_puede_realizar_pi">
-  <rdfs:domain rdf:resource="#Docente"/>
-  <rdfs:range rdf:resource="#Proyecto_investigacion"/>
-  <owl:inverseOf rdf:resource="#pi_puede_ser_realizado_docente"/>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="#estudiante_es_investigador">
-  <rdfs:domain rdf:resource="#Estudiante"/>
-  <rdfs:range rdf:resource="#Investigador"/>
-  <owl:inverseOf rdf:resource="#investigador_puede_ser_estudiante"/>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="#estudiante_pertenece_gi">
-  <rdfs:domain rdf:resource="#Estudiante"/>
-  <rdfs:range rdf:resource="#Grupo_investigacion"/>
-  <owl:inverseOf rdf:resource="#gi_tiene_estudiante"/>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="#estudiante_pertenece_programa">
-  <rdfs:domain rdf:resource="#Estudiante"/>
-  <rdfs:range rdf:resource="#Programa"/>
-  <owl:inverseOf rdf:resource="#programa_tiene_estudiante"/>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="#estudiante_realiza_pi">
-  <rdfs:domain rdf:resource="#Estudiante"/>
-  <rdfs:range rdf:resource="#Proyecto_investigacion"/>
-  <owl:inverseOf rdf:resource="#pi_puede_ser_realizado_estudiante"/>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="#facultad_pertenece_universidad">
-  <rdfs:domain rdf:resource="#Facultad"/>
-  <rdfs:range rdf:resource="#Universidad"/>
-  <owl:inverseOf rdf:resource="#universidad_tiene_facultad"/>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="#facultad_tiene_departamento">
-  <rdfs:domain rdf:resource="#Facultad"/>
-  <rdfs:range rdf:resource="#Departamento"/>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="#gi_esta_adscrito_viis">
-  <rdfs:domain rdf:resource="#Grupo_investigacion"/>
-  <rdfs:range rdf:resource="#VIIS"/>
-  <owl:inverseOf rdf:resource="#viis_adscribe_gi"/>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="#gi_pertenece_departamento">
-  <rdfs:domain rdf:resource="#Grupo_investigacion"/>
-  <rdfs:range rdf:resource="#Departamento"/>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="#gi_tiene_docente">
-  <rdfs:domain rdf:resource="#Grupo_investigacion"/>
-  <rdfs:range rdf:resource="#Docente"/>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="#gi_tiene_estudiante">
-  <rdfs:domain rdf:resource="#Grupo_investigacion"/>
-  <rdfs:range rdf:resource="#Estudiante"/>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="#gi_tiene_investigador">
-  <rdfs:domain rdf:resource="#Grupo_investigacion"/>
-  <rdfs:range rdf:resource="#Investigador"/>
-  <owl:inverseOf rdf:resource="#investigador_pertenece_gi"/>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="#gi_tiene_li">
-  <rdfs:domain rdf:resource="#Grupo_investigacion"/>
-  <rdfs:range rdf:resource="#Linea_investigacion"/>
-  <owl:inverseOf rdf:resource="#li_pertenece_gi"/>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="#ie_es_investigador">
-  <rdfs:domain rdf:resource="#Investigador_externo"/>
-  <rdfs:range rdf:resource="#Investigador"/>
-  <owl:inverseOf rdf:resource="#investigador_puede_ser_ie"/>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="#investigador_pertenece_gi">
-  <rdfs:domain rdf:resource="#Investigador"/>
-  <rdfs:range rdf:resource="#Grupo_investigacion"/>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="#investigador_pertenece_viis">
-  <rdfs:domain rdf:resource="#Investigador"/>
-  <rdfs:range rdf:resource="#VIIS"/>
-  <owl:inverseOf rdf:resource="#viis_tiene_investigador"/>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="#investigador_puede_ser_docente">
-  <rdfs:domain rdf:resource="#Investigador"/>
-  <rdfs:range rdf:resource="#Docente"/>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="#investigador_puede_ser_estudiante">
-  <rdfs:domain rdf:resource="#Investigador"/>
-  <rdfs:range rdf:resource="#Estudiante"/>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="#investigador_puede_ser_ie">
-  <rdfs:domain rdf:resource="#Investigador"/>
-  <rdfs:range rdf:resource="#Investigador_externo"/>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="#investigador_se_encuentra_convocatoria">
-  <rdfs:domain rdf:resource="#Investigador"/>
-  <rdfs:range rdf:resource="#Convocatoria"/>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="#li_pertenece_gi">
-  <rdfs:domain rdf:resource="#Linea_investigacion"/>
-  <rdfs:range rdf:resource="#Grupo_investigacion"/>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="#li_tiene_pi">
-  <rdfs:domain rdf:resource="#Linea_investigacion"/>
-  <rdfs:range rdf:resource="#Proyecto_investigacion"/>
-  <owl:inverseOf rdf:resource="#pi_pertenece_li"/>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="#palabra_conecta_palabra">
-  <rdfs:domain rdf:resource="#Palabra"/>
-  <rdfs:range rdf:resource="#Palabra"/>
-  <owl:inverseOf rdf:resource="#palabra_conecta_palabra"/>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="#palabra_describe_pi">
-  <rdfs:domain rdf:resource="#Palabra"/>
-  <rdfs:range rdf:resource="#Proyecto_investigacion"/>
-  <owl:inverseOf rdf:resource="#pi_tiene_palabra"/>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="#palabra_pertenece_diccionario">
-  <rdfs:domain rdf:resource="#Palabra"/>
-  <rdfs:range rdf:resource="#Diccionario"/>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="#palabra_sinonimo_palabra">
-  <rdfs:domain rdf:resource="#Palabra"/>
-  <rdfs:range rdf:resource="#Palabra"/>
-  <owl:inverseOf rdf:resource="#palabra_sinonimo_palabra"/>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="#pi_pertenece_convocatoria">
-  <rdfs:domain rdf:resource="#Proyecto_investigacion"/>
-  <rdfs:range rdf:resource="#Convocatoria"/>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="#pi_pertenece_li">
-  <rdfs:domain rdf:resource="#Proyecto_investigacion"/>
-  <rdfs:range rdf:resource="#Linea_investigacion"/>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="#pi_pertenece_viis">
-  <rdfs:domain rdf:resource="#Proyecto_investigacion"/>
-  <rdfs:range rdf:resource="#VIIS"/>
-  <owl:inverseOf rdf:resource="#viis_tiene_pi"/>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="#pi_puede_ser_asesorado_docente">
-  <rdfs:domain rdf:resource="#Proyecto_investigacion"/>
-  <rdfs:range rdf:resource="#Docente"/>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="#pi_puede_ser_realizado_docente">
-  <rdfs:domain rdf:resource="#Proyecto_investigacion"/>
-  <rdfs:range rdf:resource="#Docente"/>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="#pi_puede_ser_realizado_estudiante">
-  <rdfs:domain rdf:resource="#Proyecto_investigacion"/>
-  <rdfs:range rdf:resource="#Estudiante"/>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="#pi_tiene_palabra">
-  <rdfs:domain rdf:resource="#Proyecto_investigacion"/>
-  <rdfs:range rdf:resource="#Palabra"/>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="#programa_pertenece_departamento">
-  <rdfs:domain rdf:resource="#Programa"/>
-  <rdfs:range rdf:resource="#Departamento"/>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="#programa_tiene_docente">
-  <rdfs:domain rdf:resource="#Programa"/>
-  <rdfs:range rdf:resource="#Docente"/>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="#programa_tiene_estudiante">
-  <rdfs:domain rdf:resource="#Programa"/>
-  <rdfs:range rdf:resource="#Estudiante"/>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="#universidad_tiene_facultad">
-  <rdfs:domain rdf:resource="#Universidad"/>
-  <rdfs:range rdf:resource="#Facultad"/>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="#universidad_tiene_viis">
-  <rdfs:domain rdf:resource="#Universidad"/>
-  <rdfs:range rdf:resource="#VIIS"/>
-  <owl:inverseOf rdf:resource="#viis_pertenece_universidad"/>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="#viis_adscribe_gi">
-  <rdfs:domain rdf:resource="#VIIS"/>
-  <rdfs:range rdf:resource="#Grupo_investigacion"/>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="#viis_pertenece_universidad">
-  <rdfs:domain rdf:resource="#VIIS"/>
-  <rdfs:range rdf:resource="#Universidad"/>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="#viis_tiene_convocatoria">
-  <rdfs:domain rdf:resource="#VIIS"/>
-  <rdfs:range rdf:resource="#Convocatoria"/>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="#viis_tiene_investigador">
-  <rdfs:domain rdf:resource="#VIIS"/>
-  <rdfs:range rdf:resource="#Investigador"/>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="#viis_tiene_pi">
-  <rdfs:domain rdf:resource="#VIIS"/>
-  <rdfs:range rdf:resource="#Proyecto_investigacion"/>
-</owl:ObjectProperty>
-
-<owl:DatatypeProperty rdf:about="#anio_convocatoria">
-  <rdfs:domain rdf:resource="#Convocatoria"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-</owl:DatatypeProperty>
-
-<owl:DatatypeProperty rdf:about="#apellidos_docente">
-  <rdfs:domain rdf:resource="#Docente"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-</owl:DatatypeProperty>
-
-<owl:DatatypeProperty rdf:about="#apellidos_estudiante">
-  <rdfs:domain rdf:resource="#Estudiante"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-</owl:DatatypeProperty>
-
-<owl:DatatypeProperty rdf:about="#apellidos_investigador_externo">
-  <rdfs:domain rdf:resource="#Investigador_externo"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-</owl:DatatypeProperty>
-
-<owl:DatatypeProperty rdf:about="#cedula_docente">
-  <rdfs:domain rdf:resource="#Docente"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-</owl:DatatypeProperty>
-
-<owl:DatatypeProperty rdf:about="#cedula_estudiante">
-  <rdfs:domain rdf:resource="#Estudiante"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-</owl:DatatypeProperty>
-
-<owl:DatatypeProperty rdf:about="#cedula_investigador_externo">
-  <rdfs:domain rdf:resource="#Investigador_externo"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-</owl:DatatypeProperty>
-
-<owl:DatatypeProperty rdf:about="#codigo_docente">
-  <rdfs:domain rdf:resource="#Docente"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-</owl:DatatypeProperty>
-
-<owl:DatatypeProperty rdf:about="#codigo_estudiante">
-  <rdfs:domain rdf:resource="#Estudiante"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-</owl:DatatypeProperty>
-
-<owl:DatatypeProperty rdf:about="#concepto_palabra">
-  <rdfs:domain rdf:resource="#Palabra"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-</owl:DatatypeProperty>
-
-<owl:DatatypeProperty rdf:about="#correo_docente">
-  <rdfs:domain rdf:resource="#Docente"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-</owl:DatatypeProperty>
-
-<owl:DatatypeProperty rdf:about="#correo_estudiante">
-  <rdfs:domain rdf:resource="#Estudiante"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-</owl:DatatypeProperty>
-
-<owl:DatatypeProperty rdf:about="#correo_investigador_externo">
-  <rdfs:domain rdf:resource="#Investigador_externo"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-</owl:DatatypeProperty>
-
-<owl:DatatypeProperty rdf:about="#descripcion_palabra">
-  <rdfs:domain rdf:resource="#Palabra"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-</owl:DatatypeProperty>
-
-<owl:DatatypeProperty rdf:about="#detalle_palabra">
-  <rdfs:domain rdf:resource="#Palabra"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-</owl:DatatypeProperty>
-
-<owl:DatatypeProperty rdf:about="#estado_proyecto_investigacion">
-  <rdfs:domain rdf:resource="#Proyecto_investigacion"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-</owl:DatatypeProperty>
-
-<owl:DatatypeProperty rdf:about="#id_convocatoria">
-  <rdfs:domain rdf:resource="#Convocatoria"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-</owl:DatatypeProperty>
-
-<owl:DatatypeProperty rdf:about="#id_departamento">
-  <rdfs:domain rdf:resource="#Departamento"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-</owl:DatatypeProperty>
-
-<owl:DatatypeProperty rdf:about="#id_diccionario">
-  <rdfs:domain rdf:resource="#Diccionario"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-</owl:DatatypeProperty>
-
-<owl:DatatypeProperty rdf:about="#id_docente">
-  <rdfs:domain rdf:resource="#Docente"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-</owl:DatatypeProperty>
-
-<owl:DatatypeProperty rdf:about="#id_estudiante">
-  <rdfs:domain rdf:resource="#Estudiante"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-</owl:DatatypeProperty>
-
-<owl:DatatypeProperty rdf:about="#id_facultad">
-  <rdfs:domain rdf:resource="#Facultad"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-</owl:DatatypeProperty>
-
-<owl:DatatypeProperty rdf:about="#id_grupo_investigacion">
-  <rdfs:domain rdf:resource="#Grupo_investigacion"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-</owl:DatatypeProperty>
-
-<owl:DatatypeProperty rdf:about="#id_investigador">
-  <rdfs:domain rdf:resource="#Investigador"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-</owl:DatatypeProperty>
-
-<owl:DatatypeProperty rdf:about="#id_investigador_externo">
-  <rdfs:domain rdf:resource="#Investigador_externo"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-</owl:DatatypeProperty>
-
-<owl:DatatypeProperty rdf:about="#id_linea_investigacion">
-  <rdfs:domain rdf:resource="#Linea_investigacion"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-</owl:DatatypeProperty>
-
-<owl:DatatypeProperty rdf:about="#id_palabra">
-  <rdfs:domain rdf:resource="#Palabra"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-</owl:DatatypeProperty>
-
-<owl:DatatypeProperty rdf:about="#id_programa">
-  <rdfs:domain rdf:resource="#Programa"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-</owl:DatatypeProperty>
-
-<owl:DatatypeProperty rdf:about="#id_proyecto_investigacion">
-  <rdfs:domain rdf:resource="#Proyecto_investigacion"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-</owl:DatatypeProperty>
-
-<owl:DatatypeProperty rdf:about="#id_universidad">
-  <rdfs:domain rdf:resource="#Universidad"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-</owl:DatatypeProperty>
-
-<owl:DatatypeProperty rdf:about="#id_viis">
-  <rdfs:domain rdf:resource="#VIIS"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-</owl:DatatypeProperty>
-
-<owl:DatatypeProperty rdf:about="#lema_palabra">
-  <rdfs:domain rdf:resource="#Palabra"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-</owl:DatatypeProperty>
-
-<owl:DatatypeProperty rdf:about="#nombre_VIIS">
-  <rdfs:domain rdf:resource="#VIIS"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-</owl:DatatypeProperty>
-
-<owl:DatatypeProperty rdf:about="#nombre_convocatoria">
-  <rdfs:domain rdf:resource="#Convocatoria"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-</owl:DatatypeProperty>
-
-<owl:DatatypeProperty rdf:about="#nombre_departamento">
-  <rdfs:domain rdf:resource="#Departamento"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-</owl:DatatypeProperty>
-
-<owl:DatatypeProperty rdf:about="#nombre_diccionario">
-  <rdfs:domain rdf:resource="#Diccionario"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-</owl:DatatypeProperty>
-
-<owl:DatatypeProperty rdf:about="#nombre_facultad">
-  <rdfs:domain rdf:resource="#Facultad"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-</owl:DatatypeProperty>
-
-<owl:DatatypeProperty rdf:about="#nombre_grupo_investigacion">
-  <rdfs:domain rdf:resource="#Grupo_investigacion"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-</owl:DatatypeProperty>
-
-<owl:DatatypeProperty rdf:about="#nombre_investigador">
-  <rdfs:domain rdf:resource="#Investigador"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-</owl:DatatypeProperty>
-
-<owl:DatatypeProperty rdf:about="#nombre_linea_investigacion">
-  <rdfs:domain rdf:resource="#Linea_investigacion"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-</owl:DatatypeProperty>
-
-<owl:DatatypeProperty rdf:about="#nombre_programa">
-  <rdfs:domain rdf:resource="#Programa"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-</owl:DatatypeProperty>
-
-<owl:DatatypeProperty rdf:about="#nombre_universidad">
-  <rdfs:domain rdf:resource="#Universidad"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-</owl:DatatypeProperty>
-
-<owl:DatatypeProperty rdf:about="#nombres_docente">
-  <rdfs:domain rdf:resource="#Docente"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-</owl:DatatypeProperty>
-
-<owl:DatatypeProperty rdf:about="#nombres_estudiante">
-  <rdfs:domain rdf:resource="#Estudiante"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-</owl:DatatypeProperty>
-
-<owl:DatatypeProperty rdf:about="#nombres_investigador_externo">
-  <rdfs:domain rdf:resource="#Investigador_externo"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-</owl:DatatypeProperty>
-
-<owl:DatatypeProperty rdf:about="#palabra_clave1">
-  <rdfs:domain rdf:resource="#Proyecto_investigacion"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-</owl:DatatypeProperty>
-
-<owl:DatatypeProperty rdf:about="#palabra_clave2">
-  <rdfs:domain rdf:resource="#Proyecto_investigacion"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-</owl:DatatypeProperty>
-
-<owl:DatatypeProperty rdf:about="#palabra_clave3">
-  <rdfs:domain rdf:resource="#Proyecto_investigacion"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-</owl:DatatypeProperty>
-
-<owl:DatatypeProperty rdf:about="#palabra_clave4">
-  <rdfs:domain rdf:resource="#Proyecto_investigacion"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-</owl:DatatypeProperty>
-
-<owl:DatatypeProperty rdf:about="#palabra_clave5">
-  <rdfs:domain rdf:resource="#Proyecto_investigacion"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-</owl:DatatypeProperty>
-
-<owl:DatatypeProperty rdf:about="#resumen_proyecto_investigacion">
-  <rdfs:domain rdf:resource="#Proyecto_investigacion"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-</owl:DatatypeProperty>
-
-<owl:DatatypeProperty rdf:about="#significado_palabra">
-  <rdfs:domain rdf:resource="#Palabra"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-</owl:DatatypeProperty>
-
-<owl:DatatypeProperty rdf:about="#tipo_convocatoria">
-  <rdfs:domain rdf:resource="#Convocatoria"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-</owl:DatatypeProperty>
-
-<owl:DatatypeProperty rdf:about="#tipo_palabra">
-  <rdfs:domain rdf:resource="#Palabra"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-</owl:DatatypeProperty>
-
-<owl:DatatypeProperty rdf:about="#tipo_proyecto_investigacion">
-  <rdfs:domain rdf:resource="#Proyecto_investigacion"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-</owl:DatatypeProperty>
-
-<owl:DatatypeProperty rdf:about="#titulo_proyecto_investigacion">
-  <rdfs:domain rdf:resource="#Proyecto_investigacion"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-</owl:DatatypeProperty>
-
-<owl:Class rdf:about="#Convocatoria">
-  <rdfs:subClassOf rdf:resource="#VIIS"/>
-</owl:Class>
-
-<owl:Class rdf:about="#Departamento">
-  <rdfs:subClassOf rdf:resource="#Facultad"/>
-</owl:Class>
-
-<owl:Class rdf:about="#Diccionario"/>
-
-<owl:Class rdf:about="#Docente">
-  <rdfs:subClassOf rdf:resource="#Programa"/>
-</owl:Class>
-
-<owl:Class rdf:about="#Estudiante">
-  <rdfs:subClassOf rdf:resource="#Programa"/>
-</owl:Class>
-
-<owl:Class rdf:about="#Facultad">
-  <rdfs:subClassOf rdf:resource="#Universidad"/>
-</owl:Class>
-
-<owl:Class rdf:about="#Grupo_investigacion"/>
-
-<owl:Class rdf:about="#Investigador">
-  <rdfs:subClassOf rdf:resource="#Grupo_investigacion"/>
-</owl:Class>
-
-<owl:Class rdf:about="#Investigador_externo"/>
-
-<owl:Class rdf:about="#Linea_investigacion">
-  <rdfs:subClassOf rdf:resource="#Grupo_investigacion"/>
-</owl:Class>
-
-<owl:Class rdf:about="#Palabra">
-  <rdfs:subClassOf rdf:resource="#Diccionario"/>
-</owl:Class>
-
-<owl:Class rdf:about="#Programa">
-  <rdfs:subClassOf rdf:resource="#Departamento"/>
-</owl:Class>
-
-<owl:Class rdf:about="#Proyecto_investigacion"/>
-
-<owl:Class rdf:about="#Universidad"/>
-
-<owl:Class rdf:about="#VIIS">
-  <rdfs:subClassOf rdf:resource="#Universidad"/>
-</owl:Class>
-
-<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty">
-  <rdfs:domain rdf:resource="#Facultad"/>
-  <rdfs:range rdf:resource="#Universidad"/>
-</rdf:Description>
-
-<Proyecto_investigacion rdf:about="#test_proyecto_investigacion1">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Proyecto_investigacion>
-
-<Proyecto_investigacion rdf:about="#test_proyecto_investigacion2">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Proyecto_investigacion>
-
-<Grupo_investigacion rdf:about="#test_grupo_investigacion1">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Grupo_investigacion>
-
-<Investigador rdf:about="#test_investigador1">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <investigador_pertenece_gi rdf:resource="#test_grupo_investigacion1"/>
-  <nombre_investigador rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Santiago</nombre_investigador>
-</Investigador>
-
-<owl:AllDisjointClasses>
-  <owl:members rdf:parseType="Collection">
-    <rdf:Description rdf:about="#Convocatoria"/>
-    <rdf:Description rdf:about="#Departamento"/>
-    <rdf:Description rdf:about="#Diccionario"/>
-    <rdf:Description rdf:about="#Docente"/>
-    <rdf:Description rdf:about="#Estudiante"/>
-    <rdf:Description rdf:about="#Facultad"/>
-    <rdf:Description rdf:about="#Grupo_investigacion"/>
-    <rdf:Description rdf:about="#Investigador"/>
-    <rdf:Description rdf:about="#Investigador_externo"/>
-    <rdf:Description rdf:about="#Linea_investigacion"/>
-    <rdf:Description rdf:about="#Palabra"/>
-    <rdf:Description rdf:about="#Programa"/>
-    <rdf:Description rdf:about="#Proyecto_investigacion"/>
-    <rdf:Description rdf:about="#Universidad"/>
-    <rdf:Description rdf:about="#VIIS"/>
-  </owl:members>
-</owl:AllDisjointClasses>
+<rdf:RDF xmlns="http://www.semanticweb.org/OntologiaTest#"
+     xml:base="http://www.semanticweb.org/OntologiaTest"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/OntologiaTest"/>
+    
 
 
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#convocatoria_dirigida_investigador -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntologiaTest#convocatoria_dirigida_investigador">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/OntologiaTest#investigador_se_encuentra_convocatoria"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Convocatoria"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/OntologiaTest#Investigador"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#convocatoria_pertenece_viis -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntologiaTest#convocatoria_pertenece_viis">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/OntologiaTest#viis_tiene_convocatoria"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Convocatoria"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/OntologiaTest#VIIS"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#convocatoria_tiene_pi -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntologiaTest#convocatoria_tiene_pi">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/OntologiaTest#pi_pertenece_convocatoria"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Convocatoria"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/OntologiaTest#Proyecto_investigacion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#departamento_pertenece_facultad -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntologiaTest#departamento_pertenece_facultad">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/OntologiaTest#facultad_tiene_departamento"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Departamento"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/OntologiaTest#Facultad"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#departamento_tiene_gi -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntologiaTest#departamento_tiene_gi">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/OntologiaTest#gi_pertenece_departamento"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Departamento"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/OntologiaTest#Grupo_investigacion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#departamento_tiene_programa -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntologiaTest#departamento_tiene_programa">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/OntologiaTest#programa_pertenece_departamento"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Departamento"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/OntologiaTest#Programa"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#diccionario_tiene_palabra -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntologiaTest#diccionario_tiene_palabra">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/OntologiaTest#palabra_pertenece_diccionario"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/OntologiaTest#Palabra"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#docente_es_investigador -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntologiaTest#docente_es_investigador">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/OntologiaTest#investigador_puede_ser_docente"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Docente"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/OntologiaTest#Investigador"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#docente_pertenece_gi -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntologiaTest#docente_pertenece_gi">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/OntologiaTest#gi_tiene_docente"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Docente"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/OntologiaTest#Grupo_investigacion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#docente_pertenece_programa -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntologiaTest#docente_pertenece_programa">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/OntologiaTest#programa_tiene_docente"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Docente"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/OntologiaTest#Programa"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#docente_puede_asesorar_pi -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntologiaTest#docente_puede_asesorar_pi">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/OntologiaTest#pi_puede_ser_asesorado_docente"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Docente"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/OntologiaTest#Proyecto_investigacion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#docente_puede_realizar_pi -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntologiaTest#docente_puede_realizar_pi">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/OntologiaTest#pi_puede_ser_realizado_docente"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Docente"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/OntologiaTest#Proyecto_investigacion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#estudiante_es_investigador -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntologiaTest#estudiante_es_investigador">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/OntologiaTest#investigador_puede_ser_estudiante"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Estudiante"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/OntologiaTest#Investigador"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#estudiante_pertenece_gi -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntologiaTest#estudiante_pertenece_gi">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/OntologiaTest#gi_tiene_estudiante"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Estudiante"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/OntologiaTest#Grupo_investigacion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#estudiante_pertenece_programa -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntologiaTest#estudiante_pertenece_programa">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/OntologiaTest#programa_tiene_estudiante"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Estudiante"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/OntologiaTest#Programa"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#estudiante_realiza_pi -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntologiaTest#estudiante_realiza_pi">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/OntologiaTest#pi_puede_ser_realizado_estudiante"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Estudiante"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/OntologiaTest#Proyecto_investigacion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#facultad_pertenece_universidad -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntologiaTest#facultad_pertenece_universidad">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/OntologiaTest#universidad_tiene_facultad"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Facultad"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/OntologiaTest#Universidad"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#facultad_tiene_departamento -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntologiaTest#facultad_tiene_departamento">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Facultad"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/OntologiaTest#Departamento"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#gi_esta_adscrito_viis -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntologiaTest#gi_esta_adscrito_viis">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/OntologiaTest#viis_adscribe_gi"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Grupo_investigacion"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/OntologiaTest#VIIS"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#gi_pertenece_departamento -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntologiaTest#gi_pertenece_departamento">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Grupo_investigacion"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/OntologiaTest#Departamento"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#gi_tiene_docente -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntologiaTest#gi_tiene_docente">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Grupo_investigacion"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/OntologiaTest#Docente"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#gi_tiene_estudiante -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntologiaTest#gi_tiene_estudiante">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Grupo_investigacion"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/OntologiaTest#Estudiante"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#gi_tiene_investigador -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntologiaTest#gi_tiene_investigador">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/OntologiaTest#investigador_pertenece_gi"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Grupo_investigacion"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/OntologiaTest#Investigador"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#gi_tiene_li -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntologiaTest#gi_tiene_li">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/OntologiaTest#li_pertenece_gi"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Grupo_investigacion"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/OntologiaTest#Linea_investigacion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#ie_es_investigador -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntologiaTest#ie_es_investigador">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/OntologiaTest#investigador_puede_ser_ie"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Investigador_externo"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/OntologiaTest#Investigador"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#investigador_pertenece_gi -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntologiaTest#investigador_pertenece_gi">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Investigador"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/OntologiaTest#Grupo_investigacion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#investigador_pertenece_viis -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntologiaTest#investigador_pertenece_viis">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/OntologiaTest#viis_tiene_investigador"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Investigador"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/OntologiaTest#VIIS"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#investigador_puede_ser_docente -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntologiaTest#investigador_puede_ser_docente">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Investigador"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/OntologiaTest#Docente"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#investigador_puede_ser_estudiante -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntologiaTest#investigador_puede_ser_estudiante">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Investigador"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/OntologiaTest#Estudiante"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#investigador_puede_ser_ie -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntologiaTest#investigador_puede_ser_ie">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Investigador"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/OntologiaTest#Investigador_externo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#investigador_se_encuentra_convocatoria -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntologiaTest#investigador_se_encuentra_convocatoria">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Investigador"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/OntologiaTest#Convocatoria"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#li_pertenece_gi -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntologiaTest#li_pertenece_gi">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Linea_investigacion"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/OntologiaTest#Grupo_investigacion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#li_tiene_pi -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntologiaTest#li_tiene_pi">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/OntologiaTest#pi_pertenece_li"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Linea_investigacion"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/OntologiaTest#Proyecto_investigacion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#palabra_conecta_palabra -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntologiaTest#palabra_conecta_palabra">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/OntologiaTest#palabra_conecta_palabra"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Palabra"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/OntologiaTest#Palabra"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#palabra_describe_pi -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntologiaTest#palabra_describe_pi">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/OntologiaTest#pi_tiene_palabra"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Palabra"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/OntologiaTest#Proyecto_investigacion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#palabra_pertenece_diccionario -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntologiaTest#palabra_pertenece_diccionario">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Palabra"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#palabra_sinonimo_palabra -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntologiaTest#palabra_sinonimo_palabra">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/OntologiaTest#palabra_sinonimo_palabra"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Palabra"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/OntologiaTest#Palabra"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#pi_pertenece_convocatoria -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntologiaTest#pi_pertenece_convocatoria">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Proyecto_investigacion"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/OntologiaTest#Convocatoria"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#pi_pertenece_li -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntologiaTest#pi_pertenece_li">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Proyecto_investigacion"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/OntologiaTest#Linea_investigacion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#pi_pertenece_viis -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntologiaTest#pi_pertenece_viis">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/OntologiaTest#viis_tiene_pi"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Proyecto_investigacion"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/OntologiaTest#VIIS"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#pi_puede_ser_asesorado_docente -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntologiaTest#pi_puede_ser_asesorado_docente">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Proyecto_investigacion"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/OntologiaTest#Docente"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#pi_puede_ser_realizado_docente -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntologiaTest#pi_puede_ser_realizado_docente">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Proyecto_investigacion"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/OntologiaTest#Docente"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#pi_puede_ser_realizado_estudiante -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntologiaTest#pi_puede_ser_realizado_estudiante">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Proyecto_investigacion"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/OntologiaTest#Estudiante"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#pi_tiene_palabra -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntologiaTest#pi_tiene_palabra">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Proyecto_investigacion"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/OntologiaTest#Palabra"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#programa_pertenece_departamento -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntologiaTest#programa_pertenece_departamento">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Programa"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/OntologiaTest#Departamento"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#programa_tiene_docente -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntologiaTest#programa_tiene_docente">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Programa"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/OntologiaTest#Docente"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#programa_tiene_estudiante -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntologiaTest#programa_tiene_estudiante">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Programa"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/OntologiaTest#Estudiante"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#universidad_tiene_facultad -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntologiaTest#universidad_tiene_facultad">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Universidad"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/OntologiaTest#Facultad"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#universidad_tiene_viis -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntologiaTest#universidad_tiene_viis">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/OntologiaTest#viis_pertenece_universidad"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Universidad"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/OntologiaTest#VIIS"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#viis_adscribe_gi -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntologiaTest#viis_adscribe_gi">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#VIIS"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/OntologiaTest#Grupo_investigacion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#viis_pertenece_universidad -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntologiaTest#viis_pertenece_universidad">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#VIIS"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/OntologiaTest#Universidad"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#viis_tiene_convocatoria -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntologiaTest#viis_tiene_convocatoria">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#VIIS"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/OntologiaTest#Convocatoria"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#viis_tiene_investigador -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntologiaTest#viis_tiene_investigador">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#VIIS"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/OntologiaTest#Investigador"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#viis_tiene_pi -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntologiaTest#viis_tiene_pi">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#VIIS"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/OntologiaTest#Proyecto_investigacion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Facultad"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/OntologiaTest#Universidad"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#anio_convocatoria -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/OntologiaTest#anio_convocatoria">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Convocatoria"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#apellidos_docente -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/OntologiaTest#apellidos_docente">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Docente"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#apellidos_estudiante -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/OntologiaTest#apellidos_estudiante">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Estudiante"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#apellidos_investigador_externo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/OntologiaTest#apellidos_investigador_externo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Investigador_externo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#cedula_docente -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/OntologiaTest#cedula_docente">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Docente"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#cedula_estudiante -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/OntologiaTest#cedula_estudiante">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Estudiante"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#cedula_investigador_externo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/OntologiaTest#cedula_investigador_externo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Investigador_externo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#codigo_docente -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/OntologiaTest#codigo_docente">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Docente"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#codigo_estudiante -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/OntologiaTest#codigo_estudiante">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Estudiante"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#concepto_palabra -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/OntologiaTest#concepto_palabra">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Palabra"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#correo_docente -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/OntologiaTest#correo_docente">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Docente"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#correo_estudiante -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/OntologiaTest#correo_estudiante">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Estudiante"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#correo_investigador_externo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/OntologiaTest#correo_investigador_externo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Investigador_externo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#descripcion_palabra -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/OntologiaTest#descripcion_palabra">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Palabra"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#detalle_palabra -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/OntologiaTest#detalle_palabra">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Palabra"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#estado_proyecto_investigacion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/OntologiaTest#estado_proyecto_investigacion">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Proyecto_investigacion"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#id_convocatoria -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/OntologiaTest#id_convocatoria">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Convocatoria"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#id_departamento -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/OntologiaTest#id_departamento">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Departamento"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#id_diccionario -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/OntologiaTest#id_diccionario">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#id_docente -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/OntologiaTest#id_docente">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Docente"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#id_estudiante -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/OntologiaTest#id_estudiante">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Estudiante"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#id_facultad -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/OntologiaTest#id_facultad">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Facultad"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#id_grupo_investigacion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/OntologiaTest#id_grupo_investigacion">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Grupo_investigacion"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#id_investigador -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/OntologiaTest#id_investigador">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Investigador"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#id_investigador_externo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/OntologiaTest#id_investigador_externo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Investigador_externo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#id_linea_investigacion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/OntologiaTest#id_linea_investigacion">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Linea_investigacion"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#id_palabra -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/OntologiaTest#id_palabra">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Palabra"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#id_programa -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/OntologiaTest#id_programa">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Programa"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#id_proyecto_investigacion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/OntologiaTest#id_proyecto_investigacion">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Proyecto_investigacion"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#id_universidad -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/OntologiaTest#id_universidad">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Universidad"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#id_viis -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/OntologiaTest#id_viis">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#VIIS"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#lema_palabra -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/OntologiaTest#lema_palabra">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Palabra"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#nombre_VIIS -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/OntologiaTest#nombre_VIIS">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#VIIS"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#nombre_convocatoria -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/OntologiaTest#nombre_convocatoria">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Convocatoria"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#nombre_departamento -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/OntologiaTest#nombre_departamento">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Departamento"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#nombre_diccionario -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/OntologiaTest#nombre_diccionario">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#nombre_facultad -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/OntologiaTest#nombre_facultad">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Facultad"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#nombre_grupo_investigacion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/OntologiaTest#nombre_grupo_investigacion">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Grupo_investigacion"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#nombre_investigador -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/OntologiaTest#nombre_investigador">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Investigador"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#nombre_linea_investigacion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/OntologiaTest#nombre_linea_investigacion">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Linea_investigacion"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#nombre_programa -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/OntologiaTest#nombre_programa">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Programa"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#nombre_universidad -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/OntologiaTest#nombre_universidad">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Universidad"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#nombres_docente -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/OntologiaTest#nombres_docente">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Docente"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#nombres_estudiante -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/OntologiaTest#nombres_estudiante">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Estudiante"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#nombres_investigador_externo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/OntologiaTest#nombres_investigador_externo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Investigador_externo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#palabra_clave1 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/OntologiaTest#palabra_clave1">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Proyecto_investigacion"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#palabra_clave2 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/OntologiaTest#palabra_clave2">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Proyecto_investigacion"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#palabra_clave3 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/OntologiaTest#palabra_clave3">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Proyecto_investigacion"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#palabra_clave4 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/OntologiaTest#palabra_clave4">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Proyecto_investigacion"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#palabra_clave5 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/OntologiaTest#palabra_clave5">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Proyecto_investigacion"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#resumen_proyecto_investigacion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/OntologiaTest#resumen_proyecto_investigacion">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Proyecto_investigacion"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#significado_palabra -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/OntologiaTest#significado_palabra">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Palabra"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#tipo_convocatoria -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/OntologiaTest#tipo_convocatoria">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Convocatoria"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#tipo_palabra -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/OntologiaTest#tipo_palabra">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Palabra"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#tipo_proyecto_investigacion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/OntologiaTest#tipo_proyecto_investigacion">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Proyecto_investigacion"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#titulo_proyecto_investigacion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/OntologiaTest#titulo_proyecto_investigacion">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntologiaTest#Proyecto_investigacion"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#Convocatoria -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntologiaTest#Convocatoria">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/OntologiaTest#VIIS"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#Departamento -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntologiaTest#Departamento">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/OntologiaTest#Facultad"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#Docente -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntologiaTest#Docente">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/OntologiaTest#Investigador"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#Estudiante -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntologiaTest#Estudiante">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/OntologiaTest#Investigador"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#Facultad -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntologiaTest#Facultad">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/OntologiaTest#Universidad"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#Grupo_investigacion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntologiaTest#Grupo_investigacion"/>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#Investigador -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntologiaTest#Investigador"/>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#Investigador_externo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntologiaTest#Investigador_externo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/OntologiaTest#Investigador"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#Linea_investigacion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntologiaTest#Linea_investigacion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/OntologiaTest#Grupo_investigacion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#Palabra -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntologiaTest#Palabra"/>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#Programa -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntologiaTest#Programa">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/OntologiaTest#Departamento"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#Proyecto_investigacion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntologiaTest#Proyecto_investigacion"/>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#Universidad -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntologiaTest#Universidad"/>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#VIIS -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntologiaTest#VIIS">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/OntologiaTest#Universidad"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#test_grupo_investigacion1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/OntologiaTest#test_grupo_investigacion1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/OntologiaTest#Grupo_investigacion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#test_investigador1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/OntologiaTest#test_investigador1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/OntologiaTest#Investigador"/>
+        <investigador_pertenece_gi rdf:resource="http://www.semanticweb.org/OntologiaTest#test_grupo_investigacion1"/>
+        <nombre_investigador rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Santiago</nombre_investigador>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#test_proyecto_investigacion1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/OntologiaTest#test_proyecto_investigacion1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/OntologiaTest#Proyecto_investigacion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/OntologiaTest#test_proyecto_investigacion2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/OntologiaTest#test_proyecto_investigacion2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/OntologiaTest#Proyecto_investigacion"/>
+    </owl:NamedIndividual>
 </rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
