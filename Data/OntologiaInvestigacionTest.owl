@@ -619,11 +619,6 @@
   <rdfs:range rdf:resource="#Universidad"/>
 </rdf:Description>
 
-<Proyecto_investigacion rdf:about="#otro_nombre">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <titulo_proyecto_investigacion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El titulo</titulo_proyecto_investigacion>
-</Proyecto_investigacion>
-
 <Proyecto_investigacion rdf:about="#nombre2">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <titulo_proyecto_investigacion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alias</titulo_proyecto_investigacion>
@@ -632,6 +627,11 @@
 <Proyecto_investigacion rdf:about="#nombre3">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <titulo_proyecto_investigacion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tituli 3</titulo_proyecto_investigacion>
+</Proyecto_investigacion>
+
+<Proyecto_investigacion rdf:about="#otro_nombre">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <titulo_proyecto_investigacion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El titulo</titulo_proyecto_investigacion>
 </Proyecto_investigacion>
 
 <Proyecto_investigacion rdf:about="#proyecto_investigacion1.0">
