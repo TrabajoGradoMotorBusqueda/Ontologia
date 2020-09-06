@@ -325,13 +325,1032 @@ with ontologia:
 
 #############################################CREACION DE DATA PROPERTIES#################################################
 
-
-    with onto:
-        class id_estudiante(DataProperty):
-            range = [str]
+#######################PARA SNIPPET#########################################
 
 
+#with ontologia:
 
+
+    #Clase $1
+    #class atributo (DataProperty):
+        #domain = [$1]
+        #range = [str]
+
+######################################START###################################
+
+
+#with ontologia:
+
+    #Clase Universidad
+    class id_universidad (DataProperty):
+        domain = [Universidad]
+        range = [int]
+
+    #Clase Universidad
+    class nombre_universidad (DataProperty):
+        domain = [Universidad]
+        range = [str]
+
+
+
+    #Clase Facultad
+    class id_facultad (DataProperty):
+        domain = [Facultad]
+        range = [int]
+
+
+    #Clase Facultad
+    class nombre_facultad (DataProperty):
+        domain = [Facultad]
+        range = [str]
+
+
+
+    #Clase Departamento
+    class id_departamento (DataProperty):
+        domain = [Departamento]
+        range = [int]   
+
+
+    #Clase Departamento
+    class nombre_departamento (DataProperty):
+        domain = [Departamento]
+        range = [str]
+
+
+
+    #Clase Programa
+    class id_programa (DataProperty):
+        domain = [Programa]
+        range = [int]
+
+
+    #Clase Programa
+    class nombre_programa (DataProperty):
+        domain = [Programa]
+        range = [str]
+
+
+
+
+    #Clase Docente
+    class id_docente (DataProperty):
+        domain = [Docente]
+        range = [int]
+
+
+
+    #Clase Estudiante
+    class id_estudiante (DataProperty):
+        domain = [Estudiante]
+        range = [int]
+        
+
+    #Clase Grupo_investigacion
+    class id_grupo_investigacion (DataProperty):
+        domain = [Grupo_investigacion]
+        range = [int]
+        
+
+    #Clase Grupo_investigacion
+    class nombre_grupo_investigacion (DataProperty):
+        domain = [Grupo_investigacion]
+        range = [str]
+
+
+    #Clase Grupo_investigacion
+    class clasificacion_grupo_investigacion (DataProperty):
+        domain = [Grupo_investigacion]
+        range = [str]
+
+
+    #Clase Grupo_investigacion
+    class area_grupo_investigacion (DataProperty):
+        domain = [Grupo_investigacion]
+        range = [str]
+
+
+
+    #Clase Grupo_investigacion
+    class correo_grupo_investigacion (DataProperty):
+        domain = [Grupo_investigacion]
+        range = [str]
+
+
+
+
+    #Clase Linea_investigacion
+    class id_linea_investigacion (DataProperty):
+        domain = [Linea_investigacion]
+        range = [int]
+
+
+    #Clase Linea_investigacion
+    class nombre_linea_investigacion(DataProperty):
+        domain = [Linea_investigacion]
+        range = [str]
+
+
+
+    #Clase VIIS
+    class id_VIIS(DataProperty):
+        domain = [VIIS]
+        range = [str]
+
+
+    #Clase VIIS
+    class nombre_VIIS(DataProperty):
+        domain = [VIIS]
+        range = [str]
+
+
+    #Clase Convocatoria
+    class id_convocatoria(DataProperty):
+        domain = [Convocatoria]
+        range = [int]
+
+
+    #Clase Convocatoria
+    class nombre_convocatoria(DataProperty):
+        domain = [Convocatoria]
+        range = [str]
+
+
+    #Clase Convocatoria
+    class anio_convocatoria(DataProperty):
+        domain = [Convocatoria]
+        range = [int]
+
+
+    #Clase Convocatoria
+    class tipo_convocatoria(DataProperty):
+        domain = [Convocatoria]
+        range = [str]
+
+
+
+    #Clase Proyecto_investigacion
+    class id_proyecto_investigacion (DataProperty):
+        domain = [Proyecto_investigacion]
+        range = [int]
+
+
+
+    #Clase Proyecto_investigacion
+    class titulo_proyecto_investigacion (DataProperty):
+        domain = [Proyecto_investigacion]
+        range = [str]
+
+
+
+    #Clase Proyecto_investigacion
+    class resumen_proyecto_investigacion (DataProperty):
+        domain = [Proyecto_investigacion]
+        range = [str]
+
+
+
+    #Clase Proyecto_investigacion
+    class palabra_clave1 (DataProperty):
+        domain = [Proyecto_investigacion]
+        range = [str]
+
+
+
+    #Clase Proyecto_investigacion
+    class palabra_clave2 (DataProperty):
+        domain = [Proyecto_investigacion]
+        range = [str]
+
+
+
+    #Clase Proyecto_investigacion
+    class palabra_clave3 (DataProperty):
+        domain = [Proyecto_investigacion]
+        range = [str]
+
+
+
+    #Clase Proyecto_investigacion
+    class palabra_clave4 (DataProperty):
+        domain = [Proyecto_investigacion]
+        range = [str]
+
+
+
+    #Clase Proyecto_investigacion
+    class palabra_clave5 (DataProperty):
+        domain = [Proyecto_investigacion]
+        range = [str]                
+
+
+
+    #Clase Proyecto_investigacion
+    class estado_proyecto_investigacion (DataProperty):
+        domain = [Proyecto_investigacion]
+        range = [str]
+
+
+
+    #Clase Proyecto_investigacion
+    class tipo_proyecto_investigacion (DataProperty):
+        domain = [Proyecto_investigacion]
+        range = [str]
+
+
+
+    #Clase Investigador
+    class id_investigador (DataProperty):
+        domain = [Investigador]
+        range = [int]
+
+
+    #Clase Investigador
+    class nombres_investigador (DataProperty):
+        domain = [Investigador]
+        range = [str]
+
+
+    #Clase Investigador
+    class apellidos_investigador (DataProperty):
+        domain = [Investigador]
+        range = [str]
+
+
+    #Clase Investigador
+    class codigo_investigador (DataProperty):
+        domain = [Investigador]
+        range = [str]
+
+
+    #Clase Investigador
+    class cedula_investigador (DataProperty):
+        domain = [Investigador]
+        range = [str]
+
+
+    #Clase Investigador
+    class correo_investigador (DataProperty):
+        domain = [Investigador]
+        range = [str]
+
+
+
+    #Clase Palabra
+    class id_palabra(DataProperty):
+        domain = [Palabra]
+        range = [int]
+
+
+    #Clase Palabra
+    class descripcion_palabra (DataProperty):
+        domain = [Palabra]
+        range = [str]
+
+
+    #Clase Palabra
+    class lema_palabra (DataProperty):
+        domain = [Palabra]
+        range = [str]
+
+
+    #Clase Palabra
+    class tipo_palabra (DataProperty):
+        domain = [Palabra]
+        range = [str]
+
+
+    #Clase Palabra
+    class concepto_palabra (DataProperty):
+        domain = [Palabra]
+        range = [str]
+
+
+    #Clase Investigador_externo
+    class id_investigador_externo(DataProperty):
+        domain = [Investigador_externo]
+        range = [str]
 
 #############################################CREACION DE OBJECT PROPERTIES#################################################
 
+
+
+#######################PARA SNIPPET#########################################
+
+#with ontologia:
+	#class $1 (ObjectProperty):
+# 		domain = [$2]
+# 		range = [$3]
+# 		inverse_property = $4
+
+# 	class $4 (ObjectProperty):
+# 		domain = [$3]
+# 		range = [$2]
+# 		inverse_property = $1
+
+# #Metodo $2
+# 	def relation_$1(self,$5)
+# 		self.$1.append($5)
+
+# #Metodo $3
+# 	def relation_$4(self,$6)
+# 		self.$4.append($6)
+
+######################################START###################################
+
+#with ontologia:
+	class universidad_tiene_facultad (ObjectProperty):
+		domain = [Universidad]
+		range = [Facultad]
+		inverse_property = facultad_pertenece_universidad
+
+	class facultad_pertenece_universidad (ObjectProperty):
+		domain = [Facultad]
+		range = [Universidad]
+		inverse_property = universidad_tiene_facultad
+
+	#Metodo Universidad
+	def relation_universidad_tiene_facultad(self,facultad):
+		self.universidad_tiene_facultad.append(facultad)
+
+	#Metodo Facultad
+	def relation_facultad_pertenece_universidad(self,universidad):
+		self.facultad_pertenece_universidad.append(universidad)
+
+
+
+
+
+
+#OP
+	class universidad_tiene_viis (ObjectProperty):
+		domain = [Universidad]
+		range = [VIIS]
+		inverse_property = viis_pertenece_universidad
+
+	class viis_pertenece_universidad (ObjectProperty):
+		domain = [VIIS]
+		range = [Universidad]
+		inverse_property = universidad_tiene_viis
+
+	#Metodo Universidad
+	def relation_universidad_tiene_viis(self,viis):
+		self.universidad_tiene_viis.append(viis)
+
+	#Metodo VIIS
+	def relation_viis_pertenece_universidad(self,universidad):
+		self.viis_pertenece_universidad.append(universidad)
+
+
+
+
+
+
+
+
+
+
+#OP
+	class facultad_tiene_departamento (ObjectProperty):
+		domain = [Facultad]
+		range = [Departamento]
+		inverse_property = departamento_pertenece_facultad
+
+	class departamento_pertenece_facultad (ObjectProperty):
+		domain = [Departamento]
+		range = [Facultad]
+		inverse_property = facultad_tiene_departamento
+
+	#Metodo Facultad
+	def relation_facultad_tiene_departamento(self,departamento):
+		self.facultad_tiene_departamento.append(departamento)
+
+	#Metodo Departamento
+	def relation_departamento_pertenece_facultad(self,facultad):
+		self.departamento_pertenece_facultad.append(facultad)
+
+
+
+
+
+
+
+
+
+
+
+
+#OP
+	class departamento_tiene_programa (ObjectProperty):
+		domain = [Departamento]
+		range = [Programa]
+		inverse_property = programa_pertenece_departamento
+
+	class programa_pertenece_departamento (ObjectProperty):
+		domain = [Programa]
+		range = [Departamento]
+		inverse_property = departamento_tiene_programa
+
+	#Metodo Departamento
+	def relation_departamento_tiene_programa(self,programa):
+		self.departamento_tiene_programa.append(programa)
+
+	#Metodo Programa
+	def relation_programa_pertenece_departamento(self,departamento):
+		self.programa_pertenece_departamento.append(departamento)
+
+
+
+
+
+
+
+#OP
+	class departamento_tiene_gi (ObjectProperty):
+		domain = [Departamento]
+		range = [Grupo_investigacion]
+		inverse_property = gi_pertenece_departamento
+
+	class gi_pertenece_departamento (ObjectProperty):
+		domain = [Grupo_investigacion]
+		range = [Departamento]
+		inverse_property = departamento_tiene_gi
+
+	#Metodo Departamento
+	def relation_departamento_tiene_gi(self,gi):
+		self.departamento_tiene_gi.append(gi)
+
+	#Metodo Grupo_investigacion
+	def relation_gi_pertenece_departamento(self,departamento):
+		self.gi_pertenece_departamento.append(departamento)
+
+
+
+
+
+
+
+
+#OP
+	class programa_tiene_estudiante (ObjectProperty):
+		domain = [Programa]
+		range = [Estudiante]
+		inverse_property = estudiante_pertenece_programa
+
+	class estudiante_pertenece_programa (ObjectProperty):
+		domain = [Estudiante]
+		range = [Programa]
+		inverse_property = programa_tiene_estudiante
+
+	#Metodo Programa
+	def relation_programa_tiene_estudiante(self,estudiante):
+		self.programa_tiene_estudiante.append(estudiante)
+
+	#Metodo Estudiante
+	def relation_estudiante_pertenece_programa(self,programa):
+		self.estudiante_pertenece_programa.append(programa)
+
+
+
+
+
+
+
+
+
+#OP
+	class programa_tiene_docente (ObjectProperty):
+		domain = [Programa]
+		range = [Docente]
+		inverse_property = docente_pertenece_programa
+
+	class docente_pertenece_programa (ObjectProperty):
+		domain = [Docente]
+		range = [Programa]
+		inverse_property = programa_tiene_docente
+
+	#Metodo Programa
+	def relation_programa_tiene_docente(self,docente):
+		self.programa_tiene_docente.append(docente)
+
+	#Metodo Docente
+	def relation_docente_pertenece_programa(self,programa):
+		self.docente_pertenece_programa.append(programa)
+
+
+
+
+
+
+
+
+#OP
+	class gi_tiene_li (ObjectProperty):
+		domain = [Grupo_investigacion]
+		range = [Linea_investigacion]
+		inverse_property = li_pertenece_gi
+
+	class li_pertenece_gi (ObjectProperty):
+		domain = [Linea_investigacion]
+		range = [Grupo_investigacion]
+		inverse_property = gi_tiene_li
+
+	#Metodo Grupo_investigacion
+	def relation_gi_tiene_li(self,li):
+		self.gi_tiene_li.append(li)
+
+	#Metodo Linea_investigacion
+	def relation_li_pertenece_gi(self,gi):
+		self.li_pertenece_gi.append(gi)
+
+
+
+
+
+
+
+
+#OP
+	class gi_tiene_investigador (ObjectProperty):
+		domain = [Grupo_investigacion]
+		range = [Investigador]
+		inverse_property = investigador_pertenece_gi
+
+	class investigador_pertenece_gi (ObjectProperty):
+		domain = [Investigador]
+		range = [Grupo_investigacion]
+		inverse_property = gi_tiene_investigador
+
+	#Metodo Grupo_investigacion
+	def relation_gi_tiene_investigador(self,investigador):
+		self.gi_tiene_investigador.append(investigador)
+
+	#Metodo Investigador
+	def relation_investigador_pertenece_gi(self,gi):
+		self.investigador_pertenece_gi.append(gi)
+
+
+
+
+
+
+
+
+#OP
+	class gi_tiene_docente (ObjectProperty):
+		domain = [Grupo_investigacion]
+		range = [Docente]
+		inverse_property = docente_pertenece_gi
+
+	class docente_pertenece_gi (ObjectProperty):
+		domain = [Docente]
+		range = [Grupo_investigacion]
+		inverse_property = gi_tiene_docente
+
+	#Metodo Grupo_investigacion
+	def relation_gi_tiene_docente(self,docente):
+		self.gi_tiene_docente.append(docente)
+
+	#Metodo Docente
+	def relation_docente_pertenece_gi(self,gi):
+		self.docente_pertenece_gi.append(gi)
+
+
+
+
+
+
+
+
+#OP
+	class gi_tiene_estudiante (ObjectProperty):
+		domain = [Grupo_investigacion]
+		range = [Estudiante]
+		inverse_property = estudiante_pertenece_gi
+
+	class estudiante_pertenece_gi (ObjectProperty):
+		domain = [Estudiante]
+		range = [Grupo_investigacion]
+		inverse_property = gi_tiene_estudiante
+
+	#Metodo Grupo_investigacion
+	def relation_gi_tiene_estudiante(self,estudiante):
+		self.gi_tiene_estudiante.append(estudiante)
+
+	#Metodo Estudiante
+	def relation_estudiante_pertenece_gi(self,gi):
+		self.estudiante_pertenece_gi.append(gi)
+
+
+
+
+
+
+
+
+
+#OP
+	class li_tiene_pi (ObjectProperty):
+		domain = [Linea_investigacion]
+		range = [Proyecto_investigacion]
+		inverse_property = pi_pertenece_li
+
+	class pi_pertenece_li (ObjectProperty):
+		domain = [Proyecto_investigacion]
+		range = [Linea_investigacion]
+		inverse_property = li_tiene_pi
+
+	#Metodo Linea_investigacion
+	def relation_li_tiene_pi(self,pi):
+		self.li_tiene_pi.append(pi)
+
+	#Metodo Proyecto_investigacion
+	def relation_pi_pertenece_li(self,li):
+		self.pi_pertenece_li.append(li)
+
+
+
+
+
+
+
+
+
+#OP
+	class viis_tiene_convocatoria (ObjectProperty):
+		domain = [VIIS]
+		range = [Convocatoria]
+		inverse_property = convocatoria_pertenece_viis
+
+	class convocatoria_pertenece_viis (ObjectProperty):
+		domain = [Convocatoria]
+		range = [VIIS]
+		inverse_property = viis_tiene_convocatoria
+
+	#Metodo VIIS
+	def relation_viis_tiene_convocatoria(self,convocatoria):
+		self.viis_tiene_convocatoria.append(convocatoria)
+
+	#Metodo Convocatoria
+	def relation_convocatoria_pertenece_viis(self,viis):
+		self.convocatoria_pertenece_viis.append(viis)
+
+
+
+
+
+
+
+
+
+#OP
+	class viis_tiene_investigador (ObjectProperty):
+		domain = [VIIS]
+		range = [Investigador]
+		inverse_property = investigador_pertenece_viis
+
+	class investigador_pertenece_viis (ObjectProperty):
+		domain = [Investigador]
+		range = [VIIS]
+		inverse_property = viis_tiene_investigador
+
+	#Metodo VIIS
+	def relation_viis_tiene_investigador(self,investigador):
+		self.viis_tiene_investigador.append(investigador)
+
+	#Metodo Investigador
+	def relation_investigador_pertenece_viis(self,viis):
+		self.investigador_pertenece_viis.append(viis)
+
+
+
+
+
+
+
+
+
+#OP
+	class viis_adscribe_gi (ObjectProperty):
+		domain = [VIIS]
+		range = [Grupo_investigacion]
+		inverse_property = gi_esta_adscrito_viis
+
+	class gi_esta_adscrito_viis (ObjectProperty):
+		domain = [Grupo_investigacion]
+		range = [VIIS]
+		inverse_property = viis_adscribe_gi
+
+	#Metodo VIIS
+	def relation_viis_adscribe_gi(self,gi):
+		self.viis_adscribe_gi.append(gi)
+
+	#Metodo Grupo_investigacion
+	def relation_gi_esta_adscrito_viis(self,viis):
+		self.gi_esta_adscrito_viis.append(viis)
+
+
+
+
+
+
+
+
+
+#OP
+	class viis_tiene_pi (ObjectProperty):
+		domain = [VIIS]
+		range = [Proyecto_investigacion]
+		inverse_property = pi_pertenece_viis
+
+	class pi_pertenece_viis (ObjectProperty):
+		domain = [Proyecto_investigacion]
+		range = [VIIS]
+		inverse_property = viis_tiene_pi
+
+	#Metodo VIIS
+	def relation_viis_tiene_pi(self,pi):
+		self.viis_tiene_pi.append(pi)
+
+	#Metodo Proyecto_investigacion
+	def relation_pi_pertenece_viis(self,viis):
+		self.pi_pertenece_viis.append(viis)
+
+
+	
+	
+	
+	
+	
+	
+#OP
+	class convocatoria_tiene_pi (ObjectProperty):
+		domain = [Convocatoria]
+		range = [Proyecto_investigacion]
+		inverse_property = pi_pertenece_convocatoria
+
+	class pi_pertenece_convocatoria (ObjectProperty):
+		domain = [Proyecto_investigacion]
+		range = [Convocatoria]
+		inverse_property = convocatoria_tiene_pi
+
+	#Metodo Convocatoria
+	def relation_convocatoria_tiene_pi(self,pi):
+		self.convocatoria_tiene_pi.append(pi)
+
+	#Metodo Proyecto_investigacion
+	def relation_pi_pertenece_convocatoria(self,convocatoria):
+		self.pi_pertenece_convocatoria.append(convocatoria)
+
+
+
+
+
+
+
+
+#OP
+	class convocatoria_dirigida_investigador (ObjectProperty):
+		domain = [Convocatoria]
+		range = [Investigador]
+		inverse_property = investigador_se_encuentra_convocatoria
+
+	class investigador_se_encuentra_convocatoria (ObjectProperty):
+		domain = [Investigador]
+		range = [Convocatoria]
+		inverse_property = convocatoria_dirigida_investigador
+
+	#Metodo Convocatoria
+	def relation_convocatoria_dirigida_investigador(self,investigador):
+		self.convocatoria_dirigida_investigador.append(investigador)
+
+	#Metodo Investigador
+	def relation_investigador_se_encuentra_convocatoria(self,convocatoria):
+		self.investigador_se_encuentra_convocatoria.append(convocatoria)
+
+
+
+
+
+
+
+
+#OP
+	class estudiante_realiza_pi (ObjectProperty):
+		domain = [Estudiante]
+		range = [Proyecto_investigacion]
+		inverse_property = pi_puede_ser_realizado_estudiante
+
+	class pi_puede_ser_realizado_estudiante (ObjectProperty):
+		domain = [Proyecto_investigacion]
+		range = [Estudiante]
+		inverse_property = estudiante_realiza_pi
+
+	#Metodo Estudiante
+	def relation_estudiante_realiza_pi(self,pi):
+		self.estudiante_realiza_pi.append(pi)
+
+	#Metodo Proyecto_investigacion
+	def relation_pi_puede_ser_realizado_estudiante(self,estudiante):
+		self.pi_puede_ser_realizado_estudiante.append(estudiante)
+
+
+		
+		
+		
+		
+		
+		
+#OP
+	class docente_puede_realizar_pi (ObjectProperty):
+		domain = [Docente]
+		range = [Proyecto_investigacion]
+		inverse_property = pi_puede_ser_realizado_docente
+
+	class pi_puede_ser_realizado_docente (ObjectProperty):
+		domain = [Proyecto_investigacion]
+		range = [Docente]
+		inverse_property = docente_puede_realizar_pi
+
+	#Metodo Docente
+	def relation_docente_puede_realizar_pi(self,pi):
+		self.docente_puede_realizar_pi.append(pi)
+
+	#Metodo Proyecto_investigacion
+	def relation_pi_puede_ser_realizado_docente(self,docente):
+		self.pi_puede_ser_realizado_docente.append(docente)
+
+
+		
+		
+		
+		
+		
+
+#OP
+	class docente_puede_asesorar_pi (ObjectProperty):
+		domain = [Docente]
+		range = [Proyecto_investigacion]
+		inverse_property = pi_puede_ser_asesorado_docente
+
+	class pi_puede_ser_asesorado_docente (ObjectProperty):
+		domain = [Proyecto_investigacion]
+		range = [Docente]
+		inverse_property = docente_puede_asesorar_pi
+
+	#Metodo Docente
+	def relation_docente_puede_asesorar_pi(self,pi):
+		self.docente_puede_asesorar_pi.append(pi)
+
+	#Metodo Proyecto_investigacion
+	def relation_pi_puede_ser_asesorado_docente(self,docente):
+		self.pi_puede_ser_asesorado_docente.append(docente)
+
+
+
+
+
+
+
+
+
+#OP
+	class investigador_puede_ser_docente (ObjectProperty):
+		domain = [Investigador]
+		range = [Docente]
+		inverse_property = docente_es_investigador
+
+	class docente_es_investigador (ObjectProperty):
+		domain = [Docente]
+		range = [Investigador]
+		inverse_property = investigador_puede_ser_docente
+
+	#Metodo Investigador
+	def relation_investigador_puede_ser_docente(self,docente):
+		self.investigador_puede_ser_docente.append(docente)
+
+	#Metodo Docente
+	def relation_docente_es_investigador(self,investigador):
+		self.docente_es_investigador.append(investigador)
+
+
+
+
+	
+	
+	
+	
+	
+	
+#OP
+	class investigador_puede_ser_estudiante (ObjectProperty):
+		domain = [Investigador]
+		range = [Estudiante]
+		inverse_property = estudiante_es_investigador
+
+	class estudiante_es_investigador (ObjectProperty):
+		domain = [Estudiante]
+		range = [Investigador]
+		inverse_property = investigador_puede_ser_estudiante
+
+	#Metodo Investigador
+	def relation_investigador_puede_ser_estudiante(self,estudiante):
+		self.investigador_puede_ser_estudiante.append(estudiante)
+
+	#Metodo Estudiante
+	def relation_estudiante_es_investigador(self,investigador):
+		self.estudiante_es_investigador.append(investigador)
+			
+
+
+
+
+
+
+
+
+#OP
+	class investigador_puede_ser_ie (ObjectProperty):
+		domain = [Investigador]
+		range = [Investigador_externo]
+		inverse_property = ie_es_investigador
+
+	class ie_es_investigador (ObjectProperty):
+		domain = [Investigador_externo]
+		range = [Investigador]
+		inverse_property = investigador_puede_ser_ie
+
+	#Metodo Investigador
+	def relation_investigador_puede_ser_ie(self,ie):
+		self.investigador_puede_ser_ie.append(ie)
+
+	#Metodo Investigador_externo
+	def relation_ie_es_investigador(self,investigador):
+		self.ie_es_investigador.append(investigador)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#OP
+	class palabra_sinonimo_palabra (ObjectProperty):
+		domain = [Palabra]
+		range = [Palabra]
+		inverse_property = palabra_sinonimo_palabra
+
+
+	#Metodo Palabra
+	def relation_palabra_sinonimo_palabra(self,palabra):
+		self.palabra_sinonimo_palabra.append(palabra)
+
+
+
+
+
+#OP
+	class palabra_conecta_palabra (ObjectProperty):
+		domain = [Palabra]
+		range = [Palabra]
+		inverse_property = palabra_conecta_palabra
+
+
+	#Metodo Palabra
+	def relation_palabra_conecta_palabra(self,palabra):
+		self.palabra_conecta_palabra.append(palabra)
+
+
+
+
+
+
+
+
+
+#OP
+	class pi_tiene_palabra (ObjectProperty):
+		domain = [Proyecto_investigacion]
+		range = [Palabra]
+		inverse_property = palabra_describe_pi
+
+	class palabra_describe_pi (ObjectProperty):
+		domain = [Palabra]
+		range = [Proyecto_investigacion]
+		inverse_property = pi_tiene_palabra
+
+	#Metodo Proyecto_investigacion
+	def relation_pi_tiene_palabra(self,palabra):
+		self.pi_tiene_palabra.append(palabra)
+
+	#Metodo Palabra
+	def relation_palabra_describe_pi(self,pi):
+		self.palabra_describe_pi.append(pi)
