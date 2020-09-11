@@ -167,6 +167,7 @@ with ontologia:
         # Metodo Palabra
         def relation_palabra_describe_pi(self, pi):
             self.palabra_describe_pi.append(pi)
+            #pi.pi_tiene_palabra = []
 
     # CLASE PROYECTO DE INVESTIGACION
 
@@ -207,11 +208,8 @@ with ontologia:
 
         # Metodo Proyecto_investigacion
         def relation_pi_tiene_palabra(self, palabra):
-            #relaciones = self.pi_tiene_palabra
-            #self.pi_tiene_palabra = [palabra]
-            # self.pi_tiene_palabra.extend(relaciones)
             self.pi_tiene_palabra.append(palabra)
-
+            #palabra.palabra_describe_pi = []
 
 # FALTAN PALABRAS CLAVE OJO !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 # FALTAN PALABRAS CLAVE OJO !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -325,12 +323,12 @@ with ontologia:
             return self.anio_convocatoria
 
     # Relacion Relacion Directa
-    class pi_tiene_palabra (ObjectProperty):
-        domain = [Proyecto_investigacion]
-        range = [Palabra]
+    # class pi_tiene_palabra (ObjectProperty):
+    #     domain = [Proyecto_investigacion]
+    #     range = [Palabra]
 
     # Relacio Inversa
-    class palabra_describe_pi (ObjectProperty):
-        domain = [Palabra]
-        range = [Proyecto_investigacion]
-        inverse_property = pi_tiene_palabra
+    # class palabra_describe_pi (ObjectProperty):
+    #     domain = [Palabra]
+    #     range = [Proyecto_investigacion]
+    #     inverse_property = pi_tiene_palabra
