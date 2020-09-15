@@ -470,16 +470,8 @@
         <ObjectProperty IRI="#pi_pertenece_li"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#palabra_conecta_palabra"/>
-        <ObjectProperty IRI="#palabra_conecta_palabra"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
         <ObjectProperty IRI="#palabra_describe_pi"/>
         <ObjectProperty IRI="#pi_tiene_palabra"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="#palabra_sinonimo_palabra"/>
-        <ObjectProperty IRI="#palabra_sinonimo_palabra"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#pi_pertenece_viis"/>
@@ -489,6 +481,15 @@
         <ObjectProperty IRI="#universidad_tiene_viis"/>
         <ObjectProperty IRI="#viis_pertenece_universidad"/>
     </InverseObjectProperties>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#palabra_conecta_palabra"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#palabra_sinonimo_palabra"/>
+    </SymmetricObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#palabra_conecta_palabra"/>
+    </TransitiveObjectProperty>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#convocatoria_dirigida_investigador"/>
         <Class IRI="#Convocatoria"/>

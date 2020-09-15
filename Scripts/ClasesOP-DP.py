@@ -1,5 +1,18 @@
 #############################################CREACION DE CLASES#################################################
 
+
+#comentariar cuando se suba a git
+from owlready2 import *
+
+onto_path.append("/home/grias/HP/ACTUAL/ONTOLOGIA/5 ElaboracionOntologiaenProtege")
+ontologia = get_ontology("/home/grias/HP/ACTUAL/ONTOLOGIA/5 ElaboracionOntologiaenProtege/OntologiaInvestigacionPrueba.owl")
+ontologia.load()
+#comentariar cuando se suba a git
+
+
+
+
+
 with ontologia:
     #GRUPO DE INVESTIGACION
     class Grupo_investigacion(Thing):
@@ -112,7 +125,7 @@ with ontologia:
         
 
     #SUBCLASE ESTUDIANTE INVESTIGADOR
-    class Estudiante(Investigador)
+    class Estudiante(Investigador):
 
         def get_id_estudiante(self):
             return self.id_estudiante
@@ -172,6 +185,10 @@ with ontologia:
         def set_concepto_palabra(self,concepto_palabra):
             self.concepto_palabra = [concepto_palabra]
 
+		#Metodo Palabra
+        def relation_palabra_describe_pi(self,pi):
+            self.palabra_describe_pi.append(pi)
+
 
     #CLASE PROYECTO DE INVESTIGACION
     class Proyecto_investigacion(Thing):
@@ -207,6 +224,11 @@ with ontologia:
 
         def get_tipo_proyecto_investigacion(self):
             return self.tipo_proyecto_investigacion
+
+     	#Metodo Proyecto_investigacion
+        def relation_pi_tiene_palabra(self,palabra):
+            self.pi_tiene_palabra.append(palabra)
+
 
 
 ##FALTAN PALABRAS CLAVE OJO !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -294,7 +316,7 @@ with ontologia:
             return self.nombre_VIIS
 
     #SUBCLASE CONVOCATORIA
-    class Convocatoria(VISS):
+    class Convocatoria(VIIS):
 
         def set_id_convocatoria(self, id_convocatoria):
             self.id_convocatoria = [id_convocatoria]
@@ -327,19 +349,19 @@ with ontologia:
 
 #######################PARA SNIPPET#########################################
 
-
-#with ontologia:
+"""
+with ontologia:
 
 
     #Clase $1
-    #class atributo (DataProperty):
-        #domain = [$1]
-        #range = [str]
-
+    class atributo (DataProperty):
+        domain = [$1]
+        range = [str]
+"""
 ######################################START###################################
 
 
-#with ontologia:
+with ontologia:
 
     #Clase Universidad
     class id_universidad (DataProperty):
@@ -637,28 +659,30 @@ with ontologia:
 
 #######################PARA SNIPPET#########################################
 
-#with ontologia:
-	#class $1 (ObjectProperty):
-# 		domain = [$2]
-# 		range = [$3]
-# 		inverse_property = $4
+"""
+with ontologia:
+	class $1 (ObjectProperty):
+		domain = [$2]
+		range = [$3]
+		inverse_property = $4
 
-# 	class $4 (ObjectProperty):
-# 		domain = [$3]
-# 		range = [$2]
-# 		inverse_property = $1
+	class $4 (ObjectProperty):
+		domain = [$3]
+		range = [$2]
+		inverse_property = $1
 
-# #Metodo $2
-# 	def relation_$1(self,$5)
-# 		self.$1.append($5)
+#Metodo $2
+	def relation_$1(self,$5)
+		self.$1.append($5)
 
-# #Metodo $3
-# 	def relation_$4(self,$6)
-# 		self.$4.append($6)
+#Metodo $3
+	def relation_$4(self,$6)
+		self.$4.append($6)
 
+"""
 ######################################START###################################
-
-#with ontologia:
+"""
+with ontologia:
 	class universidad_tiene_facultad (ObjectProperty):
 		domain = [Universidad]
 		range = [Facultad]
@@ -1333,19 +1357,18 @@ with ontologia:
 
 
 
-
-
+###SE ESTA PROBANDO POR AHORA CON ESTE OP, COLOCANDO LOS METODOS DENTRO DE LAS RESPECTIVAS CLASES DE PYTHON
 
 #OP
-	class pi_tiene_palabra (ObjectProperty):
-		domain = [Proyecto_investigacion]
-		range = [Palabra]
-		inverse_property = palabra_describe_pi
+class pi_tiene_palabra(ObjectProperty):
+    domain = [Proyecto_investigacion]
+	range = [Palabra]
 
-	class palabra_describe_pi (ObjectProperty):
-		domain = [Palabra]
-		range = [Proyecto_investigacion]
-		inverse_property = pi_tiene_palabra
+class palabra_describe_pi(ObjectProperty):
+	domain = [Palabra]
+	range = [Proyecto_investigacion]
+	inverse_property = pi_tiene_palabra
+
 
 	#Metodo Proyecto_investigacion
 	def relation_pi_tiene_palabra(self,palabra):
@@ -1354,3 +1377,4 @@ with ontologia:
 	#Metodo Palabra
 	def relation_palabra_describe_pi(self,pi):
 		self.palabra_describe_pi.append(pi)
+"""
