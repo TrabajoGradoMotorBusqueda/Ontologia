@@ -1,0 +1,12 @@
+inverse palabra_describe_pi some Palabra
+inverse pi_tiene_palabra some Proyecto_investigacion
+
+pi_tiene_palabra some Palabra
+palabra_describe_pi some Proyecto_investigacion
+
+Palabra and palabra_describe_pi some Proyecto_investigacion
+Proyecto_investigacion and pi_tiene_palabra some Palabra
+
+
+Palabra and palabra_describe_pi some pi1
+Proyecto_investigacion and pi_tiene_palabra value arte

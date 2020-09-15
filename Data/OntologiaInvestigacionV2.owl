@@ -1,1284 +1,1276 @@
 <?xml version="1.0"?>
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="http://www.semanticweb.org/OntologiaInvestigacion6"
+     xml:base="http://www.semanticweb.org/OntologiaInvestigacion"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     ontologyIRI="http://www.semanticweb.org/OntologiaInvestigacion6">
-    <Prefix name="" IRI="http://www.semanticweb.org/OntologiaInvestigacion6"/>
+     ontologyIRI="http://www.semanticweb.org/OntologiaInvestigacion">
+    <Prefix name="" IRI="http://www.semanticweb.org/OntologiaInvestigacion"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Declaration>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Convocatoria"/>
+        <Class IRI="#Convocatoria"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Departamento"/>
+        <Class IRI="#Departamento"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Docente"/>
+        <Class IRI="#Docente"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Estudiante"/>
+        <Class IRI="#Estudiante"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Facultad"/>
+        <Class IRI="#Facultad"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Grupo_investigacion"/>
+        <Class IRI="#Grupo_investigacion"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Investigador"/>
+        <Class IRI="#Investigador"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Investigador_externo"/>
+        <Class IRI="#Investigador_externo"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Linea_investigacion"/>
+        <Class IRI="#Linea_investigacion"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Palabra"/>
+        <Class IRI="#Palabra"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Programa"/>
+        <Class IRI="#Programa"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Proyecto_investigacion"/>
+        <Class IRI="#Proyecto_investigacion"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Universidad"/>
+        <Class IRI="#Universidad"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#VIIS"/>
+        <Class IRI="#VIIS"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#convocatoria_dirigida_investigador"/>
+        <ObjectProperty IRI="#convocatoria_dirigida_investigador"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#convocatoria_pertenece_viis"/>
+        <ObjectProperty IRI="#convocatoria_pertenece_viis"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#convocatoria_tiene_pi"/>
+        <ObjectProperty IRI="#convocatoria_tiene_pi"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#departamento_pertenece_facultad"/>
+        <ObjectProperty IRI="#departamento_pertenece_facultad"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#departamento_tiene_gi"/>
+        <ObjectProperty IRI="#departamento_tiene_gi"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#departamento_tiene_programa"/>
+        <ObjectProperty IRI="#departamento_tiene_programa"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#docente_es_investigador"/>
+        <ObjectProperty IRI="#docente_es_investigador"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#docente_pertenece_gi"/>
+        <ObjectProperty IRI="#docente_pertenece_gi"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#docente_pertenece_programa"/>
+        <ObjectProperty IRI="#docente_pertenece_programa"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#docente_puede_asesorar_pi"/>
+        <ObjectProperty IRI="#docente_puede_asesorar_pi"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#docente_puede_realizar_pi"/>
+        <ObjectProperty IRI="#docente_puede_realizar_pi"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#estudiante_es_investigador"/>
+        <ObjectProperty IRI="#estudiante_es_investigador"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#estudiante_pertenece_gi"/>
+        <ObjectProperty IRI="#estudiante_pertenece_gi"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#estudiante_pertenece_programa"/>
+        <ObjectProperty IRI="#estudiante_pertenece_programa"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#estudiante_realiza_pi"/>
+        <ObjectProperty IRI="#estudiante_realiza_pi"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#facultad_pertenece_universidad"/>
+        <ObjectProperty IRI="#facultad_pertenece_universidad"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#facultad_tiene_departamento"/>
+        <ObjectProperty IRI="#facultad_tiene_departamento"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#gi_esta_adscrito_viis"/>
+        <ObjectProperty IRI="#gi_esta_adscrito_viis"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#gi_pertenece_departamento"/>
+        <ObjectProperty IRI="#gi_pertenece_departamento"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#gi_tiene_docente"/>
+        <ObjectProperty IRI="#gi_tiene_docente"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#gi_tiene_estudiante"/>
+        <ObjectProperty IRI="#gi_tiene_estudiante"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#gi_tiene_investigador"/>
+        <ObjectProperty IRI="#gi_tiene_investigador"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#gi_tiene_li"/>
+        <ObjectProperty IRI="#gi_tiene_li"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#ie_es_investigador"/>
+        <ObjectProperty IRI="#ie_es_investigador"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#investigador_pertenece_gi"/>
+        <ObjectProperty IRI="#investigador_pertenece_gi"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#investigador_pertenece_viis"/>
+        <ObjectProperty IRI="#investigador_pertenece_viis"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#investigador_puede_ser_docente"/>
+        <ObjectProperty IRI="#investigador_puede_ser_docente"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#investigador_puede_ser_estudiante"/>
+        <ObjectProperty IRI="#investigador_puede_ser_estudiante"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#investigador_puede_ser_ie"/>
+        <ObjectProperty IRI="#investigador_puede_ser_ie"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#investigador_se_encuentra_convocatoria"/>
+        <ObjectProperty IRI="#investigador_se_encuentra_convocatoria"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#li_pertenece_gi"/>
+        <ObjectProperty IRI="#li_pertenece_gi"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#li_tiene_pi"/>
+        <ObjectProperty IRI="#li_tiene_pi"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#palabra_conecta_palabra"/>
+        <ObjectProperty IRI="#palabra_conecta_palabra"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#palabra_describe_pi"/>
+        <ObjectProperty IRI="#palabra_describe_pi"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#palabra_sinonimo_palabra"/>
+        <ObjectProperty IRI="#palabra_sinonimo_palabra"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#pi_pertenece_convocatoria"/>
+        <ObjectProperty IRI="#pi_pertenece_convocatoria"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#pi_pertenece_li"/>
+        <ObjectProperty IRI="#pi_pertenece_li"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#pi_pertenece_viis"/>
+        <ObjectProperty IRI="#pi_pertenece_viis"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#pi_puede_ser_asesorado_docente"/>
+        <ObjectProperty IRI="#pi_puede_ser_asesorado_docente"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#pi_puede_ser_realizado_docente"/>
+        <ObjectProperty IRI="#pi_puede_ser_realizado_docente"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#pi_puede_ser_realizado_estudiante"/>
+        <ObjectProperty IRI="#pi_puede_ser_realizado_estudiante"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#pi_tiene_palabra"/>
+        <ObjectProperty IRI="#pi_tiene_palabra"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#programa_pertenece_departamento"/>
+        <ObjectProperty IRI="#programa_pertenece_departamento"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#programa_tiene_docente"/>
+        <ObjectProperty IRI="#programa_tiene_docente"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#programa_tiene_estudiante"/>
+        <ObjectProperty IRI="#programa_tiene_estudiante"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#universidad_tiene_facultad"/>
+        <ObjectProperty IRI="#universidad_tiene_facultad"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#universidad_tiene_viis"/>
+        <ObjectProperty IRI="#universidad_tiene_viis"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#viis_adscribe_gi"/>
+        <ObjectProperty IRI="#viis_adscribe_gi"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#viis_pertenece_universidad"/>
+        <ObjectProperty IRI="#viis_pertenece_universidad"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#viis_tiene_convocatoria"/>
+        <ObjectProperty IRI="#viis_tiene_convocatoria"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#viis_tiene_investigador"/>
+        <ObjectProperty IRI="#viis_tiene_investigador"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#viis_tiene_pi"/>
+        <ObjectProperty IRI="#viis_tiene_pi"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#anio_convocatoria"/>
+        <DataProperty IRI="#anio_convocatoria"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#apellidos_investigador"/>
+        <DataProperty IRI="#apellidos_investigador"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#area_grupo_investigacion"/>
+        <DataProperty IRI="#area_grupo_investigacion"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#cedula_investigador"/>
+        <DataProperty IRI="#cedula_investigador"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#clasificacion_grupo_investigacion"/>
+        <DataProperty IRI="#clasificacion_grupo_investigacion"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#codigo_investigador"/>
+        <DataProperty IRI="#codigo_investigador"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#concepto_palabra"/>
+        <DataProperty IRI="#concepto_palabra"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#correo_grupo_investigacion"/>
+        <DataProperty IRI="#correo_grupo_investigacion"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#correo_investigador"/>
+        <DataProperty IRI="#correo_investigador"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#descripcion_palabra"/>
+        <DataProperty IRI="#descripcion_palabra"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#estado_proyecto_investigacion"/>
+        <DataProperty IRI="#estado_proyecto_investigacion"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#id_convocatoria"/>
+        <DataProperty IRI="#id_convocatoria"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#id_departamento"/>
+        <DataProperty IRI="#id_departamento"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#id_docente"/>
+        <DataProperty IRI="#id_docente"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#id_estudiante"/>
+        <DataProperty IRI="#id_estudiante"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#id_facultad"/>
+        <DataProperty IRI="#id_facultad"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#id_grupo_investigacion"/>
+        <DataProperty IRI="#id_grupo_investigacion"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#id_investigador"/>
+        <DataProperty IRI="#id_investigador"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#id_investigador_externo"/>
+        <DataProperty IRI="#id_investigador_externo"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#id_linea_investigacion"/>
+        <DataProperty IRI="#id_linea_investigacion"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#id_palabra"/>
+        <DataProperty IRI="#id_palabra"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#id_programa"/>
+        <DataProperty IRI="#id_programa"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#id_proyecto_investigacion"/>
+        <DataProperty IRI="#id_proyecto_investigacion"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#id_universidad"/>
+        <DataProperty IRI="#id_universidad"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#id_viis"/>
+        <DataProperty IRI="#id_viis"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#lema_palabra"/>
+        <DataProperty IRI="#lema_palabra"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#nombre_VIIS"/>
+        <DataProperty IRI="#nombre_VIIS"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#nombre_convocatoria"/>
+        <DataProperty IRI="#nombre_convocatoria"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#nombre_departamento"/>
+        <DataProperty IRI="#nombre_departamento"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#nombre_facultad"/>
+        <DataProperty IRI="#nombre_facultad"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#nombre_grupo_investigacion"/>
+        <DataProperty IRI="#nombre_grupo_investigacion"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#nombre_linea_investigacion"/>
+        <DataProperty IRI="#nombre_linea_investigacion"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#nombre_programa"/>
+        <DataProperty IRI="#nombre_programa"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#nombre_universidad"/>
+        <DataProperty IRI="#nombre_universidad"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#nombres_investigador"/>
+        <DataProperty IRI="#nombres_investigador"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#palabra_clave1"/>
+        <DataProperty IRI="#palabra_clave1"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#palabra_clave2"/>
+        <DataProperty IRI="#palabra_clave2"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#palabra_clave3"/>
+        <DataProperty IRI="#palabra_clave3"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#palabra_clave4"/>
+        <DataProperty IRI="#palabra_clave4"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#palabra_clave5"/>
+        <DataProperty IRI="#palabra_clave5"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#resumen_proyecto_investigacion"/>
+        <DataProperty IRI="#resumen_proyecto_investigacion"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#tipo_convocatoria"/>
+        <DataProperty IRI="#tipo_convocatoria"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#tipo_palabra"/>
+        <DataProperty IRI="#tipo_palabra"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#tipo_proyecto_investigacion"/>
+        <DataProperty IRI="#tipo_proyecto_investigacion"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#titulo_proyecto_investigacion"/>
+        <DataProperty IRI="#titulo_proyecto_investigacion"/>
     </Declaration>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Convocatoria"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#VIIS"/>
+        <Class IRI="#Convocatoria"/>
+        <Class IRI="#VIIS"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Departamento"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Facultad"/>
+        <Class IRI="#Departamento"/>
+        <Class IRI="#Facultad"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Docente"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Investigador"/>
+        <Class IRI="#Docente"/>
+        <Class IRI="#Investigador"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Estudiante"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Investigador"/>
+        <Class IRI="#Estudiante"/>
+        <Class IRI="#Investigador"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Facultad"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Universidad"/>
+        <Class IRI="#Facultad"/>
+        <Class IRI="#Universidad"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Investigador_externo"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Investigador"/>
+        <Class IRI="#Investigador_externo"/>
+        <Class IRI="#Investigador"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Linea_investigacion"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Grupo_investigacion"/>
+        <Class IRI="#Linea_investigacion"/>
+        <Class IRI="#Grupo_investigacion"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Programa"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Departamento"/>
+        <Class IRI="#Programa"/>
+        <Class IRI="#Departamento"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#VIIS"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Universidad"/>
+        <Class IRI="#VIIS"/>
+        <Class IRI="#Universidad"/>
     </SubClassOf>
     <InverseObjectProperties>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#convocatoria_dirigida_investigador"/>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#investigador_se_encuentra_convocatoria"/>
+        <ObjectProperty IRI="#convocatoria_dirigida_investigador"/>
+        <ObjectProperty IRI="#investigador_se_encuentra_convocatoria"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#convocatoria_pertenece_viis"/>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#viis_tiene_convocatoria"/>
+        <ObjectProperty IRI="#convocatoria_pertenece_viis"/>
+        <ObjectProperty IRI="#viis_tiene_convocatoria"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#convocatoria_tiene_pi"/>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#pi_pertenece_convocatoria"/>
+        <ObjectProperty IRI="#convocatoria_tiene_pi"/>
+        <ObjectProperty IRI="#pi_pertenece_convocatoria"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#departamento_pertenece_facultad"/>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#facultad_tiene_departamento"/>
+        <ObjectProperty IRI="#departamento_pertenece_facultad"/>
+        <ObjectProperty IRI="#facultad_tiene_departamento"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#departamento_tiene_gi"/>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#gi_pertenece_departamento"/>
+        <ObjectProperty IRI="#departamento_tiene_gi"/>
+        <ObjectProperty IRI="#gi_pertenece_departamento"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#departamento_tiene_programa"/>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#programa_pertenece_departamento"/>
+        <ObjectProperty IRI="#departamento_tiene_programa"/>
+        <ObjectProperty IRI="#programa_pertenece_departamento"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#docente_es_investigador"/>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#investigador_puede_ser_docente"/>
+        <ObjectProperty IRI="#docente_es_investigador"/>
+        <ObjectProperty IRI="#investigador_puede_ser_docente"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#docente_pertenece_gi"/>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#gi_tiene_docente"/>
+        <ObjectProperty IRI="#docente_pertenece_gi"/>
+        <ObjectProperty IRI="#gi_tiene_docente"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#docente_pertenece_programa"/>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#programa_tiene_docente"/>
+        <ObjectProperty IRI="#docente_pertenece_programa"/>
+        <ObjectProperty IRI="#programa_tiene_docente"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#docente_puede_asesorar_pi"/>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#pi_puede_ser_asesorado_docente"/>
+        <ObjectProperty IRI="#docente_puede_asesorar_pi"/>
+        <ObjectProperty IRI="#pi_puede_ser_asesorado_docente"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#docente_puede_realizar_pi"/>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#pi_puede_ser_realizado_docente"/>
+        <ObjectProperty IRI="#docente_puede_realizar_pi"/>
+        <ObjectProperty IRI="#pi_puede_ser_realizado_docente"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#estudiante_es_investigador"/>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#investigador_puede_ser_estudiante"/>
+        <ObjectProperty IRI="#estudiante_es_investigador"/>
+        <ObjectProperty IRI="#investigador_puede_ser_estudiante"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#estudiante_pertenece_gi"/>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#gi_tiene_estudiante"/>
+        <ObjectProperty IRI="#estudiante_pertenece_gi"/>
+        <ObjectProperty IRI="#gi_tiene_estudiante"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#estudiante_pertenece_programa"/>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#programa_tiene_estudiante"/>
+        <ObjectProperty IRI="#estudiante_pertenece_programa"/>
+        <ObjectProperty IRI="#programa_tiene_estudiante"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#estudiante_realiza_pi"/>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#pi_puede_ser_realizado_estudiante"/>
+        <ObjectProperty IRI="#estudiante_realiza_pi"/>
+        <ObjectProperty IRI="#pi_puede_ser_realizado_estudiante"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#facultad_pertenece_universidad"/>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#universidad_tiene_facultad"/>
+        <ObjectProperty IRI="#facultad_pertenece_universidad"/>
+        <ObjectProperty IRI="#universidad_tiene_facultad"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#gi_esta_adscrito_viis"/>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#viis_adscribe_gi"/>
+        <ObjectProperty IRI="#gi_esta_adscrito_viis"/>
+        <ObjectProperty IRI="#viis_adscribe_gi"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#gi_tiene_investigador"/>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#investigador_pertenece_gi"/>
+        <ObjectProperty IRI="#gi_tiene_investigador"/>
+        <ObjectProperty IRI="#investigador_pertenece_gi"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#gi_tiene_li"/>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#li_pertenece_gi"/>
+        <ObjectProperty IRI="#gi_tiene_li"/>
+        <ObjectProperty IRI="#li_pertenece_gi"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#ie_es_investigador"/>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#investigador_puede_ser_ie"/>
+        <ObjectProperty IRI="#ie_es_investigador"/>
+        <ObjectProperty IRI="#investigador_puede_ser_ie"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#investigador_pertenece_viis"/>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#viis_tiene_investigador"/>
+        <ObjectProperty IRI="#investigador_pertenece_viis"/>
+        <ObjectProperty IRI="#viis_tiene_investigador"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#li_tiene_pi"/>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#pi_pertenece_li"/>
+        <ObjectProperty IRI="#li_tiene_pi"/>
+        <ObjectProperty IRI="#pi_pertenece_li"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#palabra_conecta_palabra"/>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#palabra_conecta_palabra"/>
+        <ObjectProperty IRI="#palabra_conecta_palabra"/>
+        <ObjectProperty IRI="#palabra_conecta_palabra"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#palabra_describe_pi"/>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#pi_tiene_palabra"/>
+        <ObjectProperty IRI="#palabra_describe_pi"/>
+        <ObjectProperty IRI="#pi_tiene_palabra"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#palabra_sinonimo_palabra"/>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#palabra_sinonimo_palabra"/>
+        <ObjectProperty IRI="#palabra_sinonimo_palabra"/>
+        <ObjectProperty IRI="#palabra_sinonimo_palabra"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#pi_pertenece_viis"/>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#viis_tiene_pi"/>
+        <ObjectProperty IRI="#pi_pertenece_viis"/>
+        <ObjectProperty IRI="#viis_tiene_pi"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#universidad_tiene_viis"/>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#viis_pertenece_universidad"/>
+        <ObjectProperty IRI="#universidad_tiene_viis"/>
+        <ObjectProperty IRI="#viis_pertenece_universidad"/>
     </InverseObjectProperties>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#convocatoria_dirigida_investigador"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Convocatoria"/>
+        <ObjectProperty IRI="#convocatoria_dirigida_investigador"/>
+        <Class IRI="#Convocatoria"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#convocatoria_pertenece_viis"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Convocatoria"/>
+        <ObjectProperty IRI="#convocatoria_pertenece_viis"/>
+        <Class IRI="#Convocatoria"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#convocatoria_tiene_pi"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Convocatoria"/>
+        <ObjectProperty IRI="#convocatoria_tiene_pi"/>
+        <Class IRI="#Convocatoria"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#departamento_pertenece_facultad"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Departamento"/>
+        <ObjectProperty IRI="#departamento_pertenece_facultad"/>
+        <Class IRI="#Departamento"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#departamento_tiene_gi"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Departamento"/>
+        <ObjectProperty IRI="#departamento_tiene_gi"/>
+        <Class IRI="#Departamento"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#departamento_tiene_programa"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Departamento"/>
+        <ObjectProperty IRI="#departamento_tiene_programa"/>
+        <Class IRI="#Departamento"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#docente_es_investigador"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Docente"/>
+        <ObjectProperty IRI="#docente_es_investigador"/>
+        <Class IRI="#Docente"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#docente_pertenece_gi"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Docente"/>
+        <ObjectProperty IRI="#docente_pertenece_gi"/>
+        <Class IRI="#Docente"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#docente_pertenece_programa"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Docente"/>
+        <ObjectProperty IRI="#docente_pertenece_programa"/>
+        <Class IRI="#Docente"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#docente_puede_asesorar_pi"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Docente"/>
+        <ObjectProperty IRI="#docente_puede_asesorar_pi"/>
+        <Class IRI="#Docente"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#docente_puede_realizar_pi"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Docente"/>
+        <ObjectProperty IRI="#docente_puede_realizar_pi"/>
+        <Class IRI="#Docente"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#estudiante_es_investigador"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Estudiante"/>
+        <ObjectProperty IRI="#estudiante_es_investigador"/>
+        <Class IRI="#Estudiante"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#estudiante_pertenece_gi"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Estudiante"/>
+        <ObjectProperty IRI="#estudiante_pertenece_gi"/>
+        <Class IRI="#Estudiante"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#estudiante_pertenece_programa"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Estudiante"/>
+        <ObjectProperty IRI="#estudiante_pertenece_programa"/>
+        <Class IRI="#Estudiante"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#estudiante_realiza_pi"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Estudiante"/>
+        <ObjectProperty IRI="#estudiante_realiza_pi"/>
+        <Class IRI="#Estudiante"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#facultad_pertenece_universidad"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Facultad"/>
+        <ObjectProperty IRI="#facultad_pertenece_universidad"/>
+        <Class IRI="#Facultad"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#facultad_tiene_departamento"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Facultad"/>
+        <ObjectProperty IRI="#facultad_tiene_departamento"/>
+        <Class IRI="#Facultad"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#gi_esta_adscrito_viis"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Grupo_investigacion"/>
+        <ObjectProperty IRI="#gi_esta_adscrito_viis"/>
+        <Class IRI="#Grupo_investigacion"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#gi_pertenece_departamento"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Grupo_investigacion"/>
+        <ObjectProperty IRI="#gi_pertenece_departamento"/>
+        <Class IRI="#Grupo_investigacion"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#gi_tiene_docente"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Grupo_investigacion"/>
+        <ObjectProperty IRI="#gi_tiene_docente"/>
+        <Class IRI="#Grupo_investigacion"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#gi_tiene_estudiante"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Grupo_investigacion"/>
+        <ObjectProperty IRI="#gi_tiene_estudiante"/>
+        <Class IRI="#Grupo_investigacion"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#gi_tiene_investigador"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Grupo_investigacion"/>
+        <ObjectProperty IRI="#gi_tiene_investigador"/>
+        <Class IRI="#Grupo_investigacion"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#gi_tiene_li"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Grupo_investigacion"/>
+        <ObjectProperty IRI="#gi_tiene_li"/>
+        <Class IRI="#Grupo_investigacion"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#ie_es_investigador"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Investigador_externo"/>
+        <ObjectProperty IRI="#ie_es_investigador"/>
+        <Class IRI="#Investigador_externo"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#investigador_pertenece_gi"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Investigador"/>
+        <ObjectProperty IRI="#investigador_pertenece_gi"/>
+        <Class IRI="#Investigador"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#investigador_pertenece_viis"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Investigador"/>
+        <ObjectProperty IRI="#investigador_pertenece_viis"/>
+        <Class IRI="#Investigador"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#investigador_puede_ser_docente"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Investigador"/>
+        <ObjectProperty IRI="#investigador_puede_ser_docente"/>
+        <Class IRI="#Investigador"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#investigador_puede_ser_estudiante"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Investigador"/>
+        <ObjectProperty IRI="#investigador_puede_ser_estudiante"/>
+        <Class IRI="#Investigador"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#investigador_puede_ser_ie"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Investigador"/>
+        <ObjectProperty IRI="#investigador_puede_ser_ie"/>
+        <Class IRI="#Investigador"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#investigador_se_encuentra_convocatoria"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Investigador"/>
+        <ObjectProperty IRI="#investigador_se_encuentra_convocatoria"/>
+        <Class IRI="#Investigador"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#li_pertenece_gi"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Linea_investigacion"/>
+        <ObjectProperty IRI="#li_pertenece_gi"/>
+        <Class IRI="#Linea_investigacion"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#li_tiene_pi"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Linea_investigacion"/>
+        <ObjectProperty IRI="#li_tiene_pi"/>
+        <Class IRI="#Linea_investigacion"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#palabra_conecta_palabra"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Palabra"/>
+        <ObjectProperty IRI="#palabra_conecta_palabra"/>
+        <Class IRI="#Palabra"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#palabra_describe_pi"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Palabra"/>
+        <ObjectProperty IRI="#palabra_describe_pi"/>
+        <Class IRI="#Palabra"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#palabra_sinonimo_palabra"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Palabra"/>
+        <ObjectProperty IRI="#palabra_sinonimo_palabra"/>
+        <Class IRI="#Palabra"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#pi_pertenece_convocatoria"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Proyecto_investigacion"/>
+        <ObjectProperty IRI="#pi_pertenece_convocatoria"/>
+        <Class IRI="#Proyecto_investigacion"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#pi_pertenece_li"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Proyecto_investigacion"/>
+        <ObjectProperty IRI="#pi_pertenece_li"/>
+        <Class IRI="#Proyecto_investigacion"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#pi_pertenece_viis"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Proyecto_investigacion"/>
+        <ObjectProperty IRI="#pi_pertenece_viis"/>
+        <Class IRI="#Proyecto_investigacion"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#pi_puede_ser_asesorado_docente"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Proyecto_investigacion"/>
+        <ObjectProperty IRI="#pi_puede_ser_asesorado_docente"/>
+        <Class IRI="#Proyecto_investigacion"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#pi_puede_ser_realizado_docente"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Proyecto_investigacion"/>
+        <ObjectProperty IRI="#pi_puede_ser_realizado_docente"/>
+        <Class IRI="#Proyecto_investigacion"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#pi_puede_ser_realizado_estudiante"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Proyecto_investigacion"/>
+        <ObjectProperty IRI="#pi_puede_ser_realizado_estudiante"/>
+        <Class IRI="#Proyecto_investigacion"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#pi_tiene_palabra"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Proyecto_investigacion"/>
+        <ObjectProperty IRI="#pi_tiene_palabra"/>
+        <Class IRI="#Proyecto_investigacion"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#programa_pertenece_departamento"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Programa"/>
+        <ObjectProperty IRI="#programa_pertenece_departamento"/>
+        <Class IRI="#Programa"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#programa_tiene_docente"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Programa"/>
+        <ObjectProperty IRI="#programa_tiene_docente"/>
+        <Class IRI="#Programa"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#programa_tiene_estudiante"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Programa"/>
+        <ObjectProperty IRI="#programa_tiene_estudiante"/>
+        <Class IRI="#Programa"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#universidad_tiene_facultad"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Universidad"/>
+        <ObjectProperty IRI="#universidad_tiene_facultad"/>
+        <Class IRI="#Universidad"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#universidad_tiene_viis"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Universidad"/>
+        <ObjectProperty IRI="#universidad_tiene_viis"/>
+        <Class IRI="#Universidad"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#viis_adscribe_gi"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#VIIS"/>
+        <ObjectProperty IRI="#viis_adscribe_gi"/>
+        <Class IRI="#VIIS"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#viis_pertenece_universidad"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#VIIS"/>
+        <ObjectProperty IRI="#viis_pertenece_universidad"/>
+        <Class IRI="#VIIS"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#viis_tiene_convocatoria"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#VIIS"/>
+        <ObjectProperty IRI="#viis_tiene_convocatoria"/>
+        <Class IRI="#VIIS"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#viis_tiene_investigador"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#VIIS"/>
+        <ObjectProperty IRI="#viis_tiene_investigador"/>
+        <Class IRI="#VIIS"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#viis_tiene_pi"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#VIIS"/>
+        <ObjectProperty IRI="#viis_tiene_pi"/>
+        <Class IRI="#VIIS"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Facultad"/>
+        <Class IRI="#Facultad"/>
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#convocatoria_dirigida_investigador"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Investigador"/>
+        <ObjectProperty IRI="#convocatoria_dirigida_investigador"/>
+        <Class IRI="#Investigador"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#convocatoria_pertenece_viis"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#VIIS"/>
+        <ObjectProperty IRI="#convocatoria_pertenece_viis"/>
+        <Class IRI="#VIIS"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#convocatoria_tiene_pi"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Proyecto_investigacion"/>
+        <ObjectProperty IRI="#convocatoria_tiene_pi"/>
+        <Class IRI="#Proyecto_investigacion"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#departamento_pertenece_facultad"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Facultad"/>
+        <ObjectProperty IRI="#departamento_pertenece_facultad"/>
+        <Class IRI="#Facultad"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#departamento_tiene_gi"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Grupo_investigacion"/>
+        <ObjectProperty IRI="#departamento_tiene_gi"/>
+        <Class IRI="#Grupo_investigacion"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#departamento_tiene_programa"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Programa"/>
+        <ObjectProperty IRI="#departamento_tiene_programa"/>
+        <Class IRI="#Programa"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#docente_es_investigador"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Investigador"/>
+        <ObjectProperty IRI="#docente_es_investigador"/>
+        <Class IRI="#Investigador"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#docente_pertenece_gi"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Grupo_investigacion"/>
+        <ObjectProperty IRI="#docente_pertenece_gi"/>
+        <Class IRI="#Grupo_investigacion"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#docente_pertenece_programa"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Programa"/>
+        <ObjectProperty IRI="#docente_pertenece_programa"/>
+        <Class IRI="#Programa"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#docente_puede_asesorar_pi"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Proyecto_investigacion"/>
+        <ObjectProperty IRI="#docente_puede_asesorar_pi"/>
+        <Class IRI="#Proyecto_investigacion"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#docente_puede_realizar_pi"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Proyecto_investigacion"/>
+        <ObjectProperty IRI="#docente_puede_realizar_pi"/>
+        <Class IRI="#Proyecto_investigacion"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#estudiante_es_investigador"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Investigador"/>
+        <ObjectProperty IRI="#estudiante_es_investigador"/>
+        <Class IRI="#Investigador"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#estudiante_pertenece_gi"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Grupo_investigacion"/>
+        <ObjectProperty IRI="#estudiante_pertenece_gi"/>
+        <Class IRI="#Grupo_investigacion"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#estudiante_pertenece_programa"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Programa"/>
+        <ObjectProperty IRI="#estudiante_pertenece_programa"/>
+        <Class IRI="#Programa"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#estudiante_realiza_pi"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Proyecto_investigacion"/>
+        <ObjectProperty IRI="#estudiante_realiza_pi"/>
+        <Class IRI="#Proyecto_investigacion"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#facultad_pertenece_universidad"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Universidad"/>
+        <ObjectProperty IRI="#facultad_pertenece_universidad"/>
+        <Class IRI="#Universidad"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#facultad_tiene_departamento"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Departamento"/>
+        <ObjectProperty IRI="#facultad_tiene_departamento"/>
+        <Class IRI="#Departamento"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#gi_esta_adscrito_viis"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#VIIS"/>
+        <ObjectProperty IRI="#gi_esta_adscrito_viis"/>
+        <Class IRI="#VIIS"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#gi_pertenece_departamento"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Departamento"/>
+        <ObjectProperty IRI="#gi_pertenece_departamento"/>
+        <Class IRI="#Departamento"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#gi_tiene_docente"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Docente"/>
+        <ObjectProperty IRI="#gi_tiene_docente"/>
+        <Class IRI="#Docente"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#gi_tiene_estudiante"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Estudiante"/>
+        <ObjectProperty IRI="#gi_tiene_estudiante"/>
+        <Class IRI="#Estudiante"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#gi_tiene_investigador"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Investigador"/>
+        <ObjectProperty IRI="#gi_tiene_investigador"/>
+        <Class IRI="#Investigador"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#gi_tiene_li"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Linea_investigacion"/>
+        <ObjectProperty IRI="#gi_tiene_li"/>
+        <Class IRI="#Linea_investigacion"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#ie_es_investigador"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Investigador"/>
+        <ObjectProperty IRI="#ie_es_investigador"/>
+        <Class IRI="#Investigador"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#investigador_pertenece_gi"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Grupo_investigacion"/>
+        <ObjectProperty IRI="#investigador_pertenece_gi"/>
+        <Class IRI="#Grupo_investigacion"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#investigador_pertenece_viis"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#VIIS"/>
+        <ObjectProperty IRI="#investigador_pertenece_viis"/>
+        <Class IRI="#VIIS"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#investigador_puede_ser_docente"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Docente"/>
+        <ObjectProperty IRI="#investigador_puede_ser_docente"/>
+        <Class IRI="#Docente"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#investigador_puede_ser_estudiante"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Estudiante"/>
+        <ObjectProperty IRI="#investigador_puede_ser_estudiante"/>
+        <Class IRI="#Estudiante"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#investigador_puede_ser_ie"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Investigador_externo"/>
+        <ObjectProperty IRI="#investigador_puede_ser_ie"/>
+        <Class IRI="#Investigador_externo"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#investigador_se_encuentra_convocatoria"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Convocatoria"/>
+        <ObjectProperty IRI="#investigador_se_encuentra_convocatoria"/>
+        <Class IRI="#Convocatoria"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#li_pertenece_gi"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Grupo_investigacion"/>
+        <ObjectProperty IRI="#li_pertenece_gi"/>
+        <Class IRI="#Grupo_investigacion"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#li_tiene_pi"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Proyecto_investigacion"/>
+        <ObjectProperty IRI="#li_tiene_pi"/>
+        <Class IRI="#Proyecto_investigacion"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#palabra_conecta_palabra"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Palabra"/>
+        <ObjectProperty IRI="#palabra_conecta_palabra"/>
+        <Class IRI="#Palabra"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#palabra_describe_pi"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Proyecto_investigacion"/>
+        <ObjectProperty IRI="#palabra_describe_pi"/>
+        <Class IRI="#Proyecto_investigacion"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#palabra_sinonimo_palabra"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Palabra"/>
+        <ObjectProperty IRI="#palabra_sinonimo_palabra"/>
+        <Class IRI="#Palabra"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#pi_pertenece_convocatoria"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Convocatoria"/>
+        <ObjectProperty IRI="#pi_pertenece_convocatoria"/>
+        <Class IRI="#Convocatoria"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#pi_pertenece_li"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Linea_investigacion"/>
+        <ObjectProperty IRI="#pi_pertenece_li"/>
+        <Class IRI="#Linea_investigacion"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#pi_pertenece_viis"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#VIIS"/>
+        <ObjectProperty IRI="#pi_pertenece_viis"/>
+        <Class IRI="#VIIS"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#pi_puede_ser_asesorado_docente"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Docente"/>
+        <ObjectProperty IRI="#pi_puede_ser_asesorado_docente"/>
+        <Class IRI="#Docente"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#pi_puede_ser_realizado_docente"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Docente"/>
+        <ObjectProperty IRI="#pi_puede_ser_realizado_docente"/>
+        <Class IRI="#Docente"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#pi_puede_ser_realizado_estudiante"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Estudiante"/>
+        <ObjectProperty IRI="#pi_puede_ser_realizado_estudiante"/>
+        <Class IRI="#Estudiante"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#pi_tiene_palabra"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Palabra"/>
+        <ObjectProperty IRI="#pi_tiene_palabra"/>
+        <Class IRI="#Palabra"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#programa_pertenece_departamento"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Departamento"/>
+        <ObjectProperty IRI="#programa_pertenece_departamento"/>
+        <Class IRI="#Departamento"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#programa_tiene_docente"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Docente"/>
+        <ObjectProperty IRI="#programa_tiene_docente"/>
+        <Class IRI="#Docente"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#programa_tiene_estudiante"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Estudiante"/>
+        <ObjectProperty IRI="#programa_tiene_estudiante"/>
+        <Class IRI="#Estudiante"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#universidad_tiene_facultad"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Facultad"/>
+        <ObjectProperty IRI="#universidad_tiene_facultad"/>
+        <Class IRI="#Facultad"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#universidad_tiene_viis"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#VIIS"/>
+        <ObjectProperty IRI="#universidad_tiene_viis"/>
+        <Class IRI="#VIIS"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#viis_adscribe_gi"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Grupo_investigacion"/>
+        <ObjectProperty IRI="#viis_adscribe_gi"/>
+        <Class IRI="#Grupo_investigacion"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#viis_pertenece_universidad"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Universidad"/>
+        <ObjectProperty IRI="#viis_pertenece_universidad"/>
+        <Class IRI="#Universidad"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#viis_tiene_convocatoria"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Convocatoria"/>
+        <ObjectProperty IRI="#viis_tiene_convocatoria"/>
+        <Class IRI="#Convocatoria"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#viis_tiene_investigador"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Investigador"/>
+        <ObjectProperty IRI="#viis_tiene_investigador"/>
+        <Class IRI="#Investigador"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#viis_tiene_pi"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Proyecto_investigacion"/>
+        <ObjectProperty IRI="#viis_tiene_pi"/>
+        <Class IRI="#Proyecto_investigacion"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Universidad"/>
+        <Class IRI="#Universidad"/>
     </ObjectPropertyRange>
-    <SubDataPropertyOf>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#clasificacion_grupo_investigacion"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#correo_grupo_investigacion"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
     <DataPropertyDomain>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#anio_convocatoria"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Convocatoria"/>
+        <DataProperty IRI="#anio_convocatoria"/>
+        <Class IRI="#Convocatoria"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#apellidos_investigador"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Investigador"/>
+        <DataProperty IRI="#apellidos_investigador"/>
+        <Class IRI="#Investigador"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#area_grupo_investigacion"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Grupo_investigacion"/>
+        <DataProperty IRI="#area_grupo_investigacion"/>
+        <Class IRI="#Grupo_investigacion"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#cedula_investigador"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Investigador"/>
+        <DataProperty IRI="#cedula_investigador"/>
+        <Class IRI="#Investigador"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#clasificacion_grupo_investigacion"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Grupo_investigacion"/>
+        <DataProperty IRI="#clasificacion_grupo_investigacion"/>
+        <Class IRI="#Grupo_investigacion"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#codigo_investigador"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Investigador"/>
+        <DataProperty IRI="#codigo_investigador"/>
+        <Class IRI="#Investigador"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#concepto_palabra"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Palabra"/>
+        <DataProperty IRI="#concepto_palabra"/>
+        <Class IRI="#Palabra"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#correo_grupo_investigacion"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Grupo_investigacion"/>
+        <DataProperty IRI="#correo_grupo_investigacion"/>
+        <Class IRI="#Grupo_investigacion"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#correo_investigador"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Investigador"/>
+        <DataProperty IRI="#correo_investigador"/>
+        <Class IRI="#Investigador"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#descripcion_palabra"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Palabra"/>
+        <DataProperty IRI="#descripcion_palabra"/>
+        <Class IRI="#Palabra"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#estado_proyecto_investigacion"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Proyecto_investigacion"/>
+        <DataProperty IRI="#estado_proyecto_investigacion"/>
+        <Class IRI="#Proyecto_investigacion"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#id_convocatoria"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Convocatoria"/>
+        <DataProperty IRI="#id_convocatoria"/>
+        <Class IRI="#Convocatoria"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#id_departamento"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Departamento"/>
+        <DataProperty IRI="#id_departamento"/>
+        <Class IRI="#Departamento"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#id_docente"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Docente"/>
+        <DataProperty IRI="#id_docente"/>
+        <Class IRI="#Docente"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#id_estudiante"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Estudiante"/>
+        <DataProperty IRI="#id_estudiante"/>
+        <Class IRI="#Estudiante"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#id_facultad"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Facultad"/>
+        <DataProperty IRI="#id_facultad"/>
+        <Class IRI="#Facultad"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#id_grupo_investigacion"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Grupo_investigacion"/>
+        <DataProperty IRI="#id_grupo_investigacion"/>
+        <Class IRI="#Grupo_investigacion"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#id_investigador"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Investigador"/>
+        <DataProperty IRI="#id_investigador"/>
+        <Class IRI="#Investigador"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#id_investigador_externo"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Investigador_externo"/>
+        <DataProperty IRI="#id_investigador_externo"/>
+        <Class IRI="#Investigador_externo"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#id_linea_investigacion"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Linea_investigacion"/>
+        <DataProperty IRI="#id_linea_investigacion"/>
+        <Class IRI="#Linea_investigacion"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#id_palabra"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Palabra"/>
+        <DataProperty IRI="#id_palabra"/>
+        <Class IRI="#Palabra"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#id_programa"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Programa"/>
+        <DataProperty IRI="#id_programa"/>
+        <Class IRI="#Programa"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#id_proyecto_investigacion"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Proyecto_investigacion"/>
+        <DataProperty IRI="#id_proyecto_investigacion"/>
+        <Class IRI="#Proyecto_investigacion"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#id_universidad"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Universidad"/>
+        <DataProperty IRI="#id_universidad"/>
+        <Class IRI="#Universidad"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#id_viis"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#VIIS"/>
+        <DataProperty IRI="#id_viis"/>
+        <Class IRI="#VIIS"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#lema_palabra"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Palabra"/>
+        <DataProperty IRI="#lema_palabra"/>
+        <Class IRI="#Palabra"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#nombre_VIIS"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#VIIS"/>
+        <DataProperty IRI="#nombre_VIIS"/>
+        <Class IRI="#VIIS"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#nombre_convocatoria"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Convocatoria"/>
+        <DataProperty IRI="#nombre_convocatoria"/>
+        <Class IRI="#Convocatoria"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#nombre_departamento"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Departamento"/>
+        <DataProperty IRI="#nombre_departamento"/>
+        <Class IRI="#Departamento"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#nombre_facultad"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Facultad"/>
+        <DataProperty IRI="#nombre_facultad"/>
+        <Class IRI="#Facultad"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#nombre_grupo_investigacion"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Grupo_investigacion"/>
+        <DataProperty IRI="#nombre_grupo_investigacion"/>
+        <Class IRI="#Grupo_investigacion"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#nombre_linea_investigacion"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Linea_investigacion"/>
+        <DataProperty IRI="#nombre_linea_investigacion"/>
+        <Class IRI="#Linea_investigacion"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#nombre_programa"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Programa"/>
+        <DataProperty IRI="#nombre_programa"/>
+        <Class IRI="#Programa"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#nombre_universidad"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Universidad"/>
+        <DataProperty IRI="#nombre_universidad"/>
+        <Class IRI="#Universidad"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#nombres_investigador"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Investigador"/>
+        <DataProperty IRI="#nombres_investigador"/>
+        <Class IRI="#Investigador"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#palabra_clave1"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Proyecto_investigacion"/>
+        <DataProperty IRI="#palabra_clave1"/>
+        <Class IRI="#Proyecto_investigacion"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#palabra_clave2"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Proyecto_investigacion"/>
+        <DataProperty IRI="#palabra_clave2"/>
+        <Class IRI="#Proyecto_investigacion"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#palabra_clave3"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Proyecto_investigacion"/>
+        <DataProperty IRI="#palabra_clave3"/>
+        <Class IRI="#Proyecto_investigacion"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#palabra_clave4"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Proyecto_investigacion"/>
+        <DataProperty IRI="#palabra_clave4"/>
+        <Class IRI="#Proyecto_investigacion"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#palabra_clave5"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Proyecto_investigacion"/>
+        <DataProperty IRI="#palabra_clave5"/>
+        <Class IRI="#Proyecto_investigacion"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#resumen_proyecto_investigacion"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Proyecto_investigacion"/>
+        <DataProperty IRI="#resumen_proyecto_investigacion"/>
+        <Class IRI="#Proyecto_investigacion"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#tipo_convocatoria"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Convocatoria"/>
+        <DataProperty IRI="#tipo_convocatoria"/>
+        <Class IRI="#Convocatoria"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#tipo_palabra"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Palabra"/>
+        <DataProperty IRI="#tipo_palabra"/>
+        <Class IRI="#Palabra"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#tipo_proyecto_investigacion"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Proyecto_investigacion"/>
+        <DataProperty IRI="#tipo_proyecto_investigacion"/>
+        <Class IRI="#Proyecto_investigacion"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#titulo_proyecto_investigacion"/>
-        <Class IRI="http://www.semanticweb.org/OntologiaInvestigacion6#Proyecto_investigacion"/>
+        <DataProperty IRI="#titulo_proyecto_investigacion"/>
+        <Class IRI="#Proyecto_investigacion"/>
     </DataPropertyDomain>
     <DataPropertyRange>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#anio_convocatoria"/>
+        <DataProperty IRI="#anio_convocatoria"/>
         <Datatype abbreviatedIRI="xsd:int"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#apellidos_investigador"/>
+        <DataProperty IRI="#apellidos_investigador"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#area_grupo_investigacion"/>
+        <DataProperty IRI="#area_grupo_investigacion"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#cedula_investigador"/>
+        <DataProperty IRI="#cedula_investigador"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#clasificacion_grupo_investigacion"/>
+        <DataProperty IRI="#clasificacion_grupo_investigacion"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#codigo_investigador"/>
+        <DataProperty IRI="#codigo_investigador"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#concepto_palabra"/>
+        <DataProperty IRI="#concepto_palabra"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#correo_grupo_investigacion"/>
+        <DataProperty IRI="#correo_grupo_investigacion"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#correo_investigador"/>
+        <DataProperty IRI="#correo_investigador"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#descripcion_palabra"/>
+        <DataProperty IRI="#descripcion_palabra"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#estado_proyecto_investigacion"/>
+        <DataProperty IRI="#estado_proyecto_investigacion"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#id_convocatoria"/>
+        <DataProperty IRI="#id_convocatoria"/>
         <Datatype abbreviatedIRI="xsd:int"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#id_departamento"/>
+        <DataProperty IRI="#id_departamento"/>
         <Datatype abbreviatedIRI="xsd:int"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#id_docente"/>
+        <DataProperty IRI="#id_docente"/>
         <Datatype abbreviatedIRI="xsd:int"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#id_estudiante"/>
+        <DataProperty IRI="#id_estudiante"/>
         <Datatype abbreviatedIRI="xsd:int"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#id_facultad"/>
+        <DataProperty IRI="#id_facultad"/>
         <Datatype abbreviatedIRI="xsd:int"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#id_grupo_investigacion"/>
+        <DataProperty IRI="#id_grupo_investigacion"/>
         <Datatype abbreviatedIRI="xsd:int"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#id_investigador"/>
+        <DataProperty IRI="#id_investigador"/>
         <Datatype abbreviatedIRI="xsd:int"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#id_investigador_externo"/>
+        <DataProperty IRI="#id_investigador_externo"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#id_linea_investigacion"/>
+        <DataProperty IRI="#id_linea_investigacion"/>
         <Datatype abbreviatedIRI="xsd:int"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#id_palabra"/>
+        <DataProperty IRI="#id_palabra"/>
         <Datatype abbreviatedIRI="xsd:int"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#id_programa"/>
+        <DataProperty IRI="#id_programa"/>
         <Datatype abbreviatedIRI="xsd:int"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#id_proyecto_investigacion"/>
+        <DataProperty IRI="#id_proyecto_investigacion"/>
         <Datatype abbreviatedIRI="xsd:int"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#id_universidad"/>
+        <DataProperty IRI="#id_universidad"/>
         <Datatype abbreviatedIRI="xsd:int"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#id_viis"/>
+        <DataProperty IRI="#id_viis"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#lema_palabra"/>
+        <DataProperty IRI="#lema_palabra"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#nombre_VIIS"/>
+        <DataProperty IRI="#nombre_VIIS"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#nombre_convocatoria"/>
+        <DataProperty IRI="#nombre_convocatoria"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#nombre_departamento"/>
+        <DataProperty IRI="#nombre_departamento"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#nombre_facultad"/>
+        <DataProperty IRI="#nombre_facultad"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#nombre_grupo_investigacion"/>
+        <DataProperty IRI="#nombre_grupo_investigacion"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#nombre_linea_investigacion"/>
+        <DataProperty IRI="#nombre_linea_investigacion"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#nombre_programa"/>
+        <DataProperty IRI="#nombre_programa"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#nombre_universidad"/>
+        <DataProperty IRI="#nombre_universidad"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#nombres_investigador"/>
+        <DataProperty IRI="#nombres_investigador"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#palabra_clave1"/>
+        <DataProperty IRI="#palabra_clave1"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#palabra_clave2"/>
+        <DataProperty IRI="#palabra_clave2"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#palabra_clave3"/>
+        <DataProperty IRI="#palabra_clave3"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#palabra_clave4"/>
+        <DataProperty IRI="#palabra_clave4"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#palabra_clave5"/>
+        <DataProperty IRI="#palabra_clave5"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#resumen_proyecto_investigacion"/>
+        <DataProperty IRI="#resumen_proyecto_investigacion"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#tipo_convocatoria"/>
+        <DataProperty IRI="#tipo_convocatoria"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#tipo_palabra"/>
+        <DataProperty IRI="#tipo_palabra"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#tipo_proyecto_investigacion"/>
+        <DataProperty IRI="#tipo_proyecto_investigacion"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://www.semanticweb.org/OntologiaInvestigacion6#titulo_proyecto_investigacion"/>
+        <DataProperty IRI="#titulo_proyecto_investigacion"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
 </Ontology>
