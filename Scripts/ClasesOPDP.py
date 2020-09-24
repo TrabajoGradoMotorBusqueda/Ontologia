@@ -48,6 +48,23 @@ with ontologia:
             self.correo_grupo_investigacion = [correo_grupo_investigacion]
 
 
+        def relation_gi_tiene_li(self,li):
+            self.gi_tiene_li.append(li)
+
+
+
+        def relation_gi_tiene_investigador(self,investigador):
+            self.gi_tiene_investigador.append(investigador)
+
+
+
+        def relation_gi_tiene_docente(self,docente):
+            self.gi_tiene_docente.append(docente)
+
+
+        def relation_gi_tiene_estudiante(self,estudiante):
+            self.gi_tiene_estudiante.append(estudiante)
+
     #SUBCLASE LINEA DE INVESTIGACION
     class Linea_investigacion(Grupo_investigacion):
         
@@ -63,8 +80,12 @@ with ontologia:
         def set_nombre_linea_investigacion(self, nombre_linea_investigacion):           
             self.nombre_linea_investigacion = [nombre_linea_investigacion]
         
+
+        def relation_li_tiene_pi(self,pi):
+            self.li_tiene_pi.append(pi)
+
         
-    #CLASE INVESTIGACION 
+    #CLASE INVESTIGADOR
     class Investigador(Thing):
         
         def get_id_investigador(self):
@@ -114,6 +135,20 @@ with ontologia:
             self.correo_investigador = [correo_investigador]
     
 
+
+        def relation_investigador_puede_ser_docente(self,docente):
+            self.investigador_puede_ser_docente.append(docente)
+
+
+
+        def relation_investigador_puede_ser_estudiante(self,estudiante):
+            self.investigador_puede_ser_estudiante.append(estudiante)
+
+
+        def relation_investigador_puede_ser_ie(self,ie):
+            self.investigador_puede_ser_ie.append(ie)
+
+
     #SUBCLASE DOCENTE INVESTIGADOR
     class Docente(Investigador):
 
@@ -122,6 +157,14 @@ with ontologia:
         
         def set_id_docente(self, id_docente):            
             self.id_docente = [id_docente]
+
+
+        def relation_docente_puede_realizar_pi(self,pi):
+            self.docente_puede_realizar_pi.append(pi)
+
+
+        def relation_docente_puede_asesorar_pi(self,pi):
+            self.docente_puede_asesorar_pi.append(pi)
         
 
     #SUBCLASE ESTUDIANTE INVESTIGADOR
@@ -132,6 +175,11 @@ with ontologia:
         
         def set_id_estudiante(self, id_estudiante):            
             self.id_estudiante = [id_estudiante]
+
+
+       def relation_estudiante_realiza_pi(self,pi):
+            self.estudiante_realiza_pi.append(pi)
+
         
         
     #SUBCLASE DOCENTE INVESTIGADOR
@@ -185,9 +233,16 @@ with ontologia:
         def set_concepto_palabra(self,concepto_palabra):
             self.concepto_palabra = [concepto_palabra]
 
-		#Metodo Palabra
-        def relation_palabra_describe_pi(self,pi):
-            self.palabra_describe_pi.append(pi)
+
+
+        def relation_palabra_sinonimo_palabra(self,palabra):
+            self.palabra_sinonimo_palabra.append(palabra)
+
+
+        def relation_palabra_conecta_palabra(self,palabra):
+            self.palabra_conecta_palabra.append(palabra)
+
+
 
 
     #CLASE PROYECTO DE INVESTIGACION
@@ -225,7 +280,6 @@ with ontologia:
         def get_tipo_proyecto_investigacion(self):
             return self.tipo_proyecto_investigacion
 
-     	#Metodo Proyecto_investigacion
         def relation_pi_tiene_palabra(self,palabra):
             self.pi_tiene_palabra.append(palabra)
 
@@ -252,7 +306,13 @@ with ontologia:
 
         def get_nombre_universidad(self):
             return self.nombre_universidad
-                        
+
+        def relation_universidad_tiene_facultad(self,facultad):
+            self.universidad_tiene_facultad.append(facultad)
+
+        def relation_universidad_tiene_viis(self,viis):
+            self.universidad_tiene_viis.append(viis)
+                            
 
     #SUBCLASE FACULTAD
     class Facultad(Universidad):
@@ -268,6 +328,9 @@ with ontologia:
 
         def get_nombre_facultad(self):
             return self.nombre_facultad
+
+        def relation_facultad_tiene_departamento(self,departamento):
+            self.facultad_tiene_departamento.append(departamento)
         
 
     #SUBCLASE DEPARTAMENTO
@@ -284,7 +347,13 @@ with ontologia:
         def get_nombre_departamento(self):
             return self.nombre_departamento
 
-  
+        def relation_departamento_tiene_programa(self,programa):
+            self.departamento_tiene_programa.append(programa)
+
+   
+        def relation_departamento_tiene_gi(self,gi):
+            self.departamento_tiene_gi.append(gi)
+      
     #SUBCLASE PROGRAMA
     class Programa(Departamento):
 
@@ -298,7 +367,14 @@ with ontologia:
             self.nombre_programa = [nombre_programa]
         
         def get_nombre_programa(self):
-            return self.nombre_programa
+            return self.nombre_programa    
+
+        def relation_programa_tiene_estudiante(self,estudiante):
+            self.programa_tiene_estudiante.append(estudiante)
+
+
+        def relation_programa_tiene_docente(self,docente):
+            self.programa_tiene_docente.append(docente)
 
 
     #CLASE VIIS
@@ -314,6 +390,23 @@ with ontologia:
         
         def get_nombre_VIIS(self):
             return self.nombre_VIIS
+
+
+        def relation_viis_tiene_convocatoria(self,convocatoria):
+            self.viis_tiene_convocatoria.append(convocatoria)
+
+
+        def relation_viis_tiene_investigador(self,investigador):
+            self.viis_tiene_investigador.append(investigador)
+
+
+        def relation_viis_adscribe_gi(self,gi):
+            self.viis_adscribe_gi.append(gi)
+
+
+        def relation_viis_tiene_pi(self,pi):
+            self.viis_tiene_pi.append(pi)
+
 
     #SUBCLASE CONVOCATORIA
     class Convocatoria(VIIS):
@@ -342,6 +435,13 @@ with ontologia:
         def get_anio_convocatoria(self):
             return self.anio_convocatoria
 
+        def relation_convocatoria_tiene_pi(self,pi):
+            self.convocatoria_tiene_pi.append(pi)
+
+        def relation_convocatoria_dirigida_investigador(self,investigador):
+            self.convocatoria_dirigida_investigador.append(investigador)
+
+
 
 
 
@@ -349,15 +449,15 @@ with ontologia:
 
 #######################PARA SNIPPET#########################################
 
-"""
-with ontologia:
+
+# with ontologia:
 
 
-    #Clase $1
-    class atributo (DataProperty):
-        domain = [$1]
-        range = [str]
-"""
+#     #Clase $1
+#     class atributo (DataProperty):
+#         domain = [$1]
+#         range = [str]
+
 ######################################START###################################
 
 
@@ -659,29 +759,29 @@ with ontologia:
 
 #######################PARA SNIPPET#########################################
 
-"""
-with ontologia:
-	class $1 (ObjectProperty):
-		domain = [$2]
-		range = [$3]
-		inverse_property = $4
+# with ontologia:
+# 	class $1 (ObjectProperty):
+# 		domain = [$2]
+# 		range = [$3]
+# 		inverse_property = $4
 
-	class $4 (ObjectProperty):
-		domain = [$3]
-		range = [$2]
-		inverse_property = $1
+# 	class $4 (ObjectProperty):
+# 		domain = [$3]
+# 		range = [$2]
+# 		inverse_property = $1
 
-#Metodo $2
-	def relation_$1(self,$5)
-		self.$1.append($5)
+# #Metodo $2
+# 	def relation_$1(self,$5)
+# 		self.$1.append($5)
 
-#Metodo $3
-	def relation_$4(self,$6)
-		self.$4.append($6)
+# #Metodo $3
+# 	def relation_$4(self,$6)
+# 		self.$4.append($6)
 
-"""
 ######################################START###################################
+
 """
+
 with ontologia:
 	class universidad_tiene_facultad (ObjectProperty):
 		domain = [Universidad]
@@ -1357,7 +1457,7 @@ with ontologia:
 
 
 
-###SE ESTA PROBANDO POR AHORA CON ESTE OP, COLOCANDO LOS METODOS DENTRO DE LAS RESPECTIVAS CLASES DE PYTHON
+###SE ESTA PROBANDO POR AHORA CON ESTE OP
 
 #OP
 class pi_tiene_palabra(ObjectProperty):
