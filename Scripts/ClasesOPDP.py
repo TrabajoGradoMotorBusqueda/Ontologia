@@ -1,17 +1,7 @@
 #############################################CREACION DE CLASES#################################################
 
 
-#comentariar cuando se suba a git
-from owlready2 import *
-
-onto_path.append("/home/grias/HP/ACTUAL/ONTOLOGIA/5 ElaboracionOntologiaenProtege")
-ontologia = get_ontology("/home/grias/HP/ACTUAL/ONTOLOGIA/5 ElaboracionOntologiaenProtege/OntologiaInvestigacionPrueba.owl")
-ontologia.load()
-#comentariar cuando se suba a git
-
-
-
-
+#IMPORTAR RUTA
 
 with ontologia:
 	#GRUPO DE INVESTIGACION
