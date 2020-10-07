@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="http://www.semanticweb.org/OntologiaInvestigacionV2"
+     xml:base="http://www.semanticweb.org/OntologiaInvestigacion"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     ontologyIRI="http://www.semanticweb.org/OntologiaInvestigacionV2">
-    <Prefix name="" IRI="http://www.semanticweb.org/OntologiaInvestigacionV2"/>
+     ontologyIRI="http://www.semanticweb.org/OntologiaInvestigacion">
+    <Prefix name="" IRI="http://www.semanticweb.org/OntologiaInvestigacion"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
@@ -73,6 +73,12 @@
         <ObjectProperty IRI="#departamento_tiene_programa"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#docente_asesora_pi"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#docente_es_autor_pi"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#docente_es_investigador"/>
     </Declaration>
     <Declaration>
@@ -82,10 +88,7 @@
         <ObjectProperty IRI="#docente_pertenece_programa"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#docente_puede_asesorar_pi"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#docente_puede_realizar_pi"/>
+        <ObjectProperty IRI="#estudiante_es_autor_pi"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#estudiante_es_investigador"/>
@@ -95,9 +98,6 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#estudiante_pertenece_programa"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#estudiante_realiza_pi"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#facultad_pertenece_universidad"/>
@@ -124,25 +124,25 @@
         <ObjectProperty IRI="#gi_tiene_li"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#ie_es_autor_pi"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#ie_es_investigador"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#ie_puede_realizar_pi"/>
+        <ObjectProperty IRI="#investigador_es_docente"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#investigador_es_estudiante"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#investigador_es_ie"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#investigador_pertenece_gi"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#investigador_pertenece_viis"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#investigador_puede_ser_docente"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#investigador_puede_ser_estudiante"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#investigador_puede_ser_ie"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#investigador_se_encuentra_convocatoria"/>
@@ -163,6 +163,9 @@
         <ObjectProperty IRI="#palabra_sinonimo_palabra"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#pi_es_asesorado_docente"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#pi_pertenece_convocatoria"/>
     </Declaration>
     <Declaration>
@@ -172,16 +175,13 @@
         <ObjectProperty IRI="#pi_pertenece_viis"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#pi_puede_ser_asesorado_docente"/>
+        <ObjectProperty IRI="#pi_tiene_autor_docente"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#pi_puede_ser_realizado_docente"/>
+        <ObjectProperty IRI="#pi_tiene_autor_estudiante"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#pi_puede_ser_realizado_estudiante"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#pi_puede_ser_realizado_ie"/>
+        <ObjectProperty IRI="#pi_tiene_autor_ie"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#pi_tiene_palabra"/>
@@ -412,8 +412,16 @@
         <ObjectProperty IRI="#programa_pertenece_departamento"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
+        <ObjectProperty IRI="#docente_asesora_pi"/>
+        <ObjectProperty IRI="#pi_es_asesorado_docente"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#docente_es_autor_pi"/>
+        <ObjectProperty IRI="#pi_tiene_autor_docente"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
         <ObjectProperty IRI="#docente_es_investigador"/>
-        <ObjectProperty IRI="#investigador_puede_ser_docente"/>
+        <ObjectProperty IRI="#investigador_es_docente"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#docente_pertenece_gi"/>
@@ -424,16 +432,12 @@
         <ObjectProperty IRI="#programa_tiene_docente"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#docente_puede_asesorar_pi"/>
-        <ObjectProperty IRI="#pi_puede_ser_asesorado_docente"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="#docente_puede_realizar_pi"/>
-        <ObjectProperty IRI="#pi_puede_ser_realizado_docente"/>
+        <ObjectProperty IRI="#estudiante_es_autor_pi"/>
+        <ObjectProperty IRI="#pi_tiene_autor_estudiante"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#estudiante_es_investigador"/>
-        <ObjectProperty IRI="#investigador_puede_ser_estudiante"/>
+        <ObjectProperty IRI="#investigador_es_estudiante"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#estudiante_pertenece_gi"/>
@@ -442,10 +446,6 @@
     <InverseObjectProperties>
         <ObjectProperty IRI="#estudiante_pertenece_programa"/>
         <ObjectProperty IRI="#programa_tiene_estudiante"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="#estudiante_realiza_pi"/>
-        <ObjectProperty IRI="#pi_puede_ser_realizado_estudiante"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#facultad_pertenece_universidad"/>
@@ -464,12 +464,12 @@
         <ObjectProperty IRI="#li_pertenece_gi"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#ie_es_investigador"/>
-        <ObjectProperty IRI="#investigador_puede_ser_ie"/>
+        <ObjectProperty IRI="#ie_es_autor_pi"/>
+        <ObjectProperty IRI="#pi_tiene_autor_ie"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#ie_puede_realizar_pi"/>
-        <ObjectProperty IRI="#pi_puede_ser_realizado_ie"/>
+        <ObjectProperty IRI="#ie_es_investigador"/>
+        <ObjectProperty IRI="#investigador_es_ie"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#investigador_pertenece_viis"/>
@@ -525,6 +525,14 @@
         <Class IRI="#Departamento"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#docente_asesora_pi"/>
+        <Class IRI="#Docente"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#docente_es_autor_pi"/>
+        <Class IRI="#Docente"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#docente_es_investigador"/>
         <Class IRI="#Docente"/>
     </ObjectPropertyDomain>
@@ -537,12 +545,8 @@
         <Class IRI="#Docente"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#docente_puede_asesorar_pi"/>
-        <Class IRI="#Docente"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#docente_puede_realizar_pi"/>
-        <Class IRI="#Docente"/>
+        <ObjectProperty IRI="#estudiante_es_autor_pi"/>
+        <Class IRI="#Estudiante"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#estudiante_es_investigador"/>
@@ -554,10 +558,6 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#estudiante_pertenece_programa"/>
-        <Class IRI="#Estudiante"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#estudiante_realiza_pi"/>
         <Class IRI="#Estudiante"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
@@ -593,12 +593,24 @@
         <Class IRI="#Grupo_investigacion"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#ie_es_autor_pi"/>
+        <Class IRI="#Proyecto_investigacion"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#ie_es_investigador"/>
         <Class IRI="#Investigador_externo"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#ie_puede_realizar_pi"/>
-        <Class IRI="#Proyecto_investigacion"/>
+        <ObjectProperty IRI="#investigador_es_docente"/>
+        <Class IRI="#Investigador"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#investigador_es_estudiante"/>
+        <Class IRI="#Investigador"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#investigador_es_ie"/>
+        <Class IRI="#Investigador"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#investigador_pertenece_gi"/>
@@ -606,18 +618,6 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#investigador_pertenece_viis"/>
-        <Class IRI="#Investigador"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#investigador_puede_ser_docente"/>
-        <Class IRI="#Investigador"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#investigador_puede_ser_estudiante"/>
-        <Class IRI="#Investigador"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#investigador_puede_ser_ie"/>
         <Class IRI="#Investigador"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
@@ -645,6 +645,10 @@
         <Class IRI="#Palabra"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#pi_es_asesorado_docente"/>
+        <Class IRI="#Proyecto_investigacion"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#pi_pertenece_convocatoria"/>
         <Class IRI="#Proyecto_investigacion"/>
     </ObjectPropertyDomain>
@@ -657,19 +661,15 @@
         <Class IRI="#Proyecto_investigacion"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#pi_puede_ser_asesorado_docente"/>
+        <ObjectProperty IRI="#pi_tiene_autor_docente"/>
         <Class IRI="#Proyecto_investigacion"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#pi_puede_ser_realizado_docente"/>
+        <ObjectProperty IRI="#pi_tiene_autor_estudiante"/>
         <Class IRI="#Proyecto_investigacion"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#pi_puede_ser_realizado_estudiante"/>
-        <Class IRI="#Proyecto_investigacion"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#pi_puede_ser_realizado_ie"/>
+        <ObjectProperty IRI="#pi_tiene_autor_ie"/>
         <Class IRI="#Investigador_externo"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
@@ -745,6 +745,14 @@
         <Class IRI="#Programa"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#docente_asesora_pi"/>
+        <Class IRI="#Proyecto_investigacion"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#docente_es_autor_pi"/>
+        <Class IRI="#Proyecto_investigacion"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#docente_es_investigador"/>
         <Class IRI="#Investigador"/>
     </ObjectPropertyRange>
@@ -757,11 +765,7 @@
         <Class IRI="#Programa"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#docente_puede_asesorar_pi"/>
-        <Class IRI="#Proyecto_investigacion"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#docente_puede_realizar_pi"/>
+        <ObjectProperty IRI="#estudiante_es_autor_pi"/>
         <Class IRI="#Proyecto_investigacion"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
@@ -775,10 +779,6 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#estudiante_pertenece_programa"/>
         <Class IRI="#Programa"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#estudiante_realiza_pi"/>
-        <Class IRI="#Proyecto_investigacion"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#facultad_pertenece_universidad"/>
@@ -813,11 +813,23 @@
         <Class IRI="#Linea_investigacion"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#ie_es_autor_pi"/>
+        <Class IRI="#Investigador_externo"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#ie_es_investigador"/>
         <Class IRI="#Investigador"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#ie_puede_realizar_pi"/>
+        <ObjectProperty IRI="#investigador_es_docente"/>
+        <Class IRI="#Docente"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#investigador_es_estudiante"/>
+        <Class IRI="#Estudiante"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#investigador_es_ie"/>
         <Class IRI="#Investigador_externo"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
@@ -827,18 +839,6 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#investigador_pertenece_viis"/>
         <Class IRI="#VIIS"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#investigador_puede_ser_docente"/>
-        <Class IRI="#Docente"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#investigador_puede_ser_estudiante"/>
-        <Class IRI="#Estudiante"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#investigador_puede_ser_ie"/>
-        <Class IRI="#Investigador_externo"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#investigador_se_encuentra_convocatoria"/>
@@ -865,6 +865,10 @@
         <Class IRI="#Palabra"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#pi_es_asesorado_docente"/>
+        <Class IRI="#Docente"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#pi_pertenece_convocatoria"/>
         <Class IRI="#Convocatoria"/>
     </ObjectPropertyRange>
@@ -877,19 +881,15 @@
         <Class IRI="#VIIS"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#pi_puede_ser_asesorado_docente"/>
+        <ObjectProperty IRI="#pi_tiene_autor_docente"/>
         <Class IRI="#Docente"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#pi_puede_ser_realizado_docente"/>
-        <Class IRI="#Docente"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#pi_puede_ser_realizado_estudiante"/>
+        <ObjectProperty IRI="#pi_tiene_autor_estudiante"/>
         <Class IRI="#Estudiante"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#pi_puede_ser_realizado_ie"/>
+        <ObjectProperty IRI="#pi_tiene_autor_ie"/>
         <Class IRI="#Proyecto_investigacion"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
