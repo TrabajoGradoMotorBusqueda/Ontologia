@@ -22,6 +22,23 @@ WHERE { ?Palabra po:palabra_describe_pi po:pi427. }
 LIMIT 100
 
 
+---Directa
+PREFIX foaf: <http://www.semanticweb.org/OntologiaInvestigacionPrueba#>
+SELECT ?Proyecto ?name
+  {
+    ?Proyecto foaf:pi_tiene_palabra foaf:buscador.
+
+  }
+
+--Inversa
+PREFIX foaf: <http://www.semanticweb.org/OntologiaInvestigacionPrueba#>
+SELECT ?Palabra ?name
+  {
+    ?Palabra  ^foaf:pi_tiene_palabra foaf:pi427.
+
+  }
+
+
 -- Palabra describe PI
 
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
