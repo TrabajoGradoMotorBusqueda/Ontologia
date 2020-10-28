@@ -322,19 +322,7 @@
         <DataProperty IRI="#nombres_investigador"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#palabra_clave1"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#palabra_clave2"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#palabra_clave3"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#palabra_clave4"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#palabra_clave5"/>
+        <DataProperty IRI="#palabras_clave"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#resumen_proyecto_investigacion"/>
@@ -1081,23 +1069,7 @@
         <Class IRI="#Investigador"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="#palabra_clave1"/>
-        <Class IRI="#Proyecto_investigacion"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#palabra_clave2"/>
-        <Class IRI="#Proyecto_investigacion"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#palabra_clave3"/>
-        <Class IRI="#Proyecto_investigacion"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#palabra_clave4"/>
-        <Class IRI="#Proyecto_investigacion"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#palabra_clave5"/>
+        <DataProperty IRI="#palabras_clave"/>
         <Class IRI="#Proyecto_investigacion"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
@@ -1261,23 +1233,7 @@
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="#palabra_clave1"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#palabra_clave2"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#palabra_clave3"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#palabra_clave4"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#palabra_clave5"/>
+        <DataProperty IRI="#palabras_clave"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
